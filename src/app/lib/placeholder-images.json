@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-abstract",
+      "description": "Abstract tech background",
+      "imageUrl": "https://picsum.photos/seed/mendex1/1200/800",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "ops-marketplace",
+      "description": "Service marketplace dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex2/800/600",
+      "imageHint": "marketplace dashboard"
+    },
+    {
+      "id": "mendex-one",
+      "description": "CRM workflow automation",
+      "imageUrl": "https://picsum.photos/seed/mendex3/800/600",
+      "imageHint": "software workflow"
+    },
+    {
+      "id": "enterprise-team",
+      "description": "Engineering team working",
+      "imageUrl": "https://picsum.photos/seed/mendex4/800/500",
+      "imageHint": "office engineering"
+    }
+  ]
+}
