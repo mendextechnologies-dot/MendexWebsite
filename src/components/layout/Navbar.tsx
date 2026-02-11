@@ -51,9 +51,10 @@ export function Navbar() {
             <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">Log in</Button>
-            <Button size="sm">Get Started</Button>
+          <div className="hidden md:flex items-center">
+            <Button size="sm" asChild>
+              <Link href="/contact">Work With Us</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -68,17 +69,19 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-background border-b border-border py-4 px-4 flex flex-col gap-4">
-          <Link href="/" className="text-lg font-medium">Home</Link>
+          <Link href="/" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Home</Link>
           <div className="flex flex-col gap-2 pl-4">
             <span className="text-muted-foreground text-sm uppercase font-bold">Products</span>
-            <Link href="/products/ops-marketplace" className="text-lg">OPS Marketplace</Link>
-            <Link href="/products/mendex-one" className="text-lg">MendexOne CRM</Link>
+            <Link href="/products/ops-marketplace" className="text-lg" onClick={() => setIsOpen(false)}>OPS Marketplace</Link>
+            <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
           </div>
-          <Link href="/services" className="text-lg font-medium">Services</Link>
-          <Link href="/about" className="text-lg font-medium">About</Link>
-          <Link href="/contact" className="text-lg font-medium">Contact</Link>
+          <Link href="/services" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
           <hr className="border-border" />
-          <Button className="w-full">Get Started</Button>
+          <Button className="w-full" asChild onClick={() => setIsOpen(false)}>
+            <Link href="/contact">Work With Us</Link>
+          </Button>
         </div>
       )}
     </nav>
