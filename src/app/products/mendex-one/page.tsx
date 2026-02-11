@@ -1,5 +1,5 @@
-
 import Image from "next/image";
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -35,7 +35,11 @@ export default function MendexOnePage() {
               Workflow-driven business management for modern sales and operations teams. Automate your manual data entry and focus on building high-value relationships.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2">Start Free Trial <ArrowRight className="w-4 h-4" /></Button>
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="https://mendexone.com/">
+                  Start Free Trial <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
               <Button size="lg" variant="outline">Enterprise Pricing</Button>
             </div>
           </div>
