@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * Mendex Platform Security Rules
+     * 
+     * Core Philosophy:
+     * This ruleset enforces a strict user-ownership model for personal data and AI matchings, 
+     * while allowing public access to marketing content like products and services. 
+     * Administrative actions are restricted, and relational integrity is enforced 
+     * through path-to-data consistency checks.
+     * 
+     * Data Structure:
+     * - /products: Global public catalog.
+     * - /services: Global public catalog.
+     * - /contact_form_submissions: Write-only for public, restricted read for admins.
+     * - /users/{userId}: Private user profiles and their related sub-resources.
+     * 
+     * Key Security Decisions:
+     * - Prototyping Mode: Schema validation (types/required fields) is omitted to allow 
+     *   rapid development. Only relational fields (IDs, Ownership) are validated.
+     * - Relational Integrity: On document creation, the system ensures that internal 
+     *   ownership fields (like userId) match the path parameters.
+     * - Denormalization: AIServiceMatching documents include the userId directly to 
+     *   avoid expensive parent document lookups.
+     */
+
+    // --- Helper Functions ---
+
+    /** Checks if the request is from an authenticated user. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** Checks if the authenticated user's UID matches the provided userId. */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /** 
+     * Checks if the user is the owner of an existing document. 
+     * Used for update and delete operations to ensure the document exists and is owned.
+     */
+    function isExistingOwner(userId) {
+      return resource != null && isOwner(userId);
+    }
+
+    // --- Collection Rules ---
+
+    /**
+     * @description Publicly readable catalog of products offered by Mendex.
+     * @path /products/{productId}
+     * @allow (get, list) if true
+     * @deny (create, update, delete) for any user (Admin SDK/Console only)
+     * @principle Public marketing data with restricted writes.
+     */
+    match /products/{productId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Publicly readable catalog of Mendex services.
+     * @path /services/{serviceId}
+     * @allow (get, list) if true
+     * @deny (create, update, delete) for any user (Admin SDK/Console only)
+     * @principle Public marketing data with restricted writes.
+     */
+    match /services/{serviceId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Secure endpoint for contact form submissions.
+     * @path /contact_form_submissions/{submissionId}
+     * @allow (create) for anyone to submit an inquiry.
+     * @deny (get, list, update, delete) to prevent public data exposure.
+     * @principle Write-only public collection; requires Admin SDK or custom claims for retrieval.
+     */
+    match /contact_form_submissions/{submissionId} {
+      allow create: if true;
+      allow get, list, update, delete: if false; // TODO: Grant access to specific admin roles/claims if defined.
+    }
+
+    /**
+     * @description User profiles containing personal and company information.
+     * @path /users/{userId}
+     * @allow (get, create, update, delete) if authenticated user matches userId.
+     * @deny (list) for all users to prevent user enumeration.
+     * @principle Path-based ownership ensures users can only access their own profile.
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false; 
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+
+      /**
+       * @description AI-driven service matching records for a specific user.
+       * @path /users/{userId}/ai_service_matchings/{matchingId}
+       * @allow (get, list, create, update, delete) if the user owns the parent path.
+       * @deny (write) if the internal userId does not match the path userId.
+       * @principle Nested subcollection ownership with relational integrity enforcement.
+       */
+      match /ai_service_matchings/{matchingId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+      }
+    }
+  }
+}

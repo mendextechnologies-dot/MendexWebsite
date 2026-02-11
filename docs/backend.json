@@ -1,0 +1,291 @@
+{
+  "entities": {
+    "Product": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Product",
+      "type": "object",
+      "description": "Represents a product offered by Mendex, such as OPS Marketplace or MendexOne CRM.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the product."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the product (e.g., OPS Marketplace, MendexOne CRM)."
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the product."
+        },
+        "features": {
+          "type": "array",
+          "description": "An array of key features for the product.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "workflowDiagram": {
+          "type": "string",
+          "description": "URL to the workflow diagram image.",
+          "format": "uri"
+        },
+        "benefits": {
+          "type": "array",
+          "description": "An array of benefits the product offers.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL for the product image",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "features",
+        "workflowDiagram",
+        "benefits",
+        "imageUrl"
+      ]
+    },
+    "Service": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Service",
+      "type": "object",
+      "description": "Represents a service offered by Mendex (e.g., Enterprise Software Development, Cloud & Platform Engineering).",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the service."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the service."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the service."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL to the image representing the service.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "imageUrl"
+      ]
+    },
+    "ContactFormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactFormSubmission",
+      "type": "object",
+      "description": "Represents a submission from the contact form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact form submission."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person submitting the form.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message submitted through the contact form."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "Date and time the form was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submissionDate"
+      ]
+    },
+    "AIServiceMatching": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "AIServiceMatching",
+      "type": "object",
+      "description": "Represents an AI service matching record.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the AI service matching record."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N AIServiceMatching)"
+        },
+        "serviceId": {
+          "type": "string",
+          "description": "Reference to Service. (Relationship: Service 1:N AIServiceMatching)"
+        },
+        "matchScore": {
+          "type": "number",
+          "description": "The AI score associated with this possible service match."
+        },
+        "aiReasoning": {
+          "type": "string",
+          "description": "The AI algorithms reasoning for this matching."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "serviceId",
+        "matchScore",
+        "aiReasoning"
+      ]
+    },
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the Mendex platform.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "User's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "User's last name."
+        },
+        "companyName": {
+          "type": "string",
+          "description": "The company the user represents."
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "companyName"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/products/{productId}",
+        "definition": {
+          "entityName": "Product",
+          "schema": {
+            "$ref": "#/backend/entities/Product"
+          },
+          "description": "Stores product information. Accessible to all users for viewing.",
+          "params": [
+            {
+              "name": "productId",
+              "description": "Unique identifier for the product."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/services/{serviceId}",
+        "definition": {
+          "entityName": "Service",
+          "schema": {
+            "$ref": "#/backend/entities/Service"
+          },
+          "description": "Stores service information. Accessible to all users for viewing.",
+          "params": [
+            {
+              "name": "serviceId",
+              "description": "Unique identifier for the service."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/contact_form_submissions/{submissionId}",
+        "definition": {
+          "entityName": "ContactFormSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/ContactFormSubmission"
+          },
+          "description": "Stores contact form submissions.  Restricted to administrators only.",
+          "params": [
+            {
+              "name": "submissionId",
+              "description": "Unique identifier for the contact form submission."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profiles. Accessible to the user and administrators.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "Unique identifier for the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/ai_service_matchings/{matchingId}",
+        "definition": {
+          "entityName": "AIServiceMatching",
+          "schema": {
+            "$ref": "#/backend/entities/AIServiceMatching"
+          },
+          "description": "Stores AI service matchings for a specific user. Includes denormalized 'userId' for authorization independence.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "Unique identifier for the user."
+            },
+            {
+              "name": "matchingId",
+              "description": "Unique identifier for the AI service matching record."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to support the Mendex platform's core features, including product showcasing, AI-driven service matching, workflow automation, and a contact form. The design prioritizes authorization independence and QAPs (Rules are not Filters).  \n\nProducts and Services are stored in top-level collections (`products` and `services`) for easy access and management. Contact form submissions are stored in a `contact_form_submissions` collection, accessible only to administrators. AI service matchings are stored within user-specific subcollections (`users/{userId}/ai_service_matchings`), providing a clear ownership structure and enabling secure listing of matchings for each user. This design utilizes path-based ownership for user-related data and top-level collections for global data. This eliminates the need for `get()` calls in security rules and supports atomic operations. The structure supports QAPs by segregating data with different access needs into separate collections, ensuring secure `list` operations.\n\nAuthorization Independence is achieved by avoiding hierarchical authorization dependencies. For example, the `ai_service_matchings` collection resides as a subcollection of `users/{userId}`.  The userId is present in each `AIServiceMatching` document, so security rules can validate ownership without needing to `get()` the parent user document."
+  }
+}
