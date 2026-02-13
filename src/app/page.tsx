@@ -20,8 +20,6 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero-abstract");
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -79,7 +77,7 @@ export default function Home() {
             </div>
             <CardContent className="p-8">
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                AI-driven curated service marketplace with intelligent matching, structured execution workspace, and enterprise collaboration tools.
+                Intelligent service platform designed to connect organizations with experts through AI-curated matching and structured execution.
               </p>
               <Button variant="link" className="p-0 h-auto text-primary text-lg group-hover:gap-3 transition-all" asChild>
                 <Link href="/products/ops-marketplace" className="flex items-center gap-2">
@@ -146,89 +144,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Work Section */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Process</h2>
-          <p className="text-muted-foreground text-lg">A structured approach to complex engineering challenges.</p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative">
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-px bg-border -z-10" />
-          {[
-            { step: "01", icon: Search, title: "Discover", desc: "In-depth analysis of project requirements and business goals." },
-            { step: "02", icon: PenTool, title: "Design", desc: "Crafting modern user experiences and robust technical architectures." },
-            { step: "03", icon: Code2, title: "Build", desc: "Agile development cycles with continuous integration and delivery." },
-            { step: "04", icon: Rocket, title: "Scale", desc: "Performance optimization and infrastructure scaling for growth." },
-          ].map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-background border-2 border-primary rounded-full flex items-center justify-center mb-8 relative z-10 shadow-lg">
-                <item.icon className="w-8 h-8 text-primary" />
-                <span className="absolute -top-3 -right-3 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-full">{item.step}</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Mendex Section */}
-      <section className="py-24 bg-primary text-white px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Why organizations choose Mendex for their most critical projects.</h2>
-            <div className="space-y-6">
-              {[
-                { title: "Enterprise Architecture", desc: "Systems designed from day one to handle the rigors of large-scale operations." },
-                { title: "AI-Driven Platforms", desc: "Leveraging machine learning to automate and optimize complex decision making." },
-                { title: "Scalable Engineering", desc: "Modern tech stacks that grow seamlessly with your user base." },
-                { title: "Product Innovation Mindset", desc: "We don't just build to spec; we build to win in your market." },
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="mt-1 flex-shrink-0">
-                    <CheckCircle2 className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">{item.title}</h4>
-                    <p className="text-primary-foreground/80">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
-            <Image 
-              src={PlaceHolderImages.find(img => img.id === "enterprise-team")?.imageUrl || ""}
-              alt="Mendex Team"
-              fill
-              className="object-cover"
-              data-ai-hint="office engineering"
-            />
-          </div>
-        </div>
-      </section>
-
+      {/* Footer */}
       <Footer />
     </div>
-  );
-}
-
-function CheckCircle2(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
   );
 }
