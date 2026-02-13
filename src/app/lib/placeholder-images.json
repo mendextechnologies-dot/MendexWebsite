@@ -36,6 +36,12 @@
       "description": "Vendor compliance dashboard",
       "imageUrl": "https://picsum.photos/seed/vendor1/800/600",
       "imageHint": "compliance dashboard"
+    },
+    {
+      "id": "mendex-one-hrms",
+      "description": "HR Management dashboard",
+      "imageUrl": "https://picsum.photos/seed/hrms1/800/600",
+      "imageHint": "hr dashboard"
     }
   ]
 }

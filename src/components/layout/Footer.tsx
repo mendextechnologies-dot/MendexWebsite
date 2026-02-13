@@ -24,6 +24,7 @@ export function Footer() {
               <li><Link href="/products/tender-intelligence" className="text-sm text-muted-foreground hover:text-primary transition-colors">AI Tender Intelligence</Link></li>
               <li><Link href="/products/vendor-readiness" className="text-sm text-muted-foreground hover:text-primary transition-colors">PSU Vendor Readiness</Link></li>
               <li><Link href="/products/mendex-one" className="text-sm text-muted-foreground hover:text-primary transition-colors">MendexOne CRM</Link></li>
+              <li><Link href="/products/mendex-one-hrms" className="text-sm text-muted-foreground hover:text-primary transition-colors">MendexOne HRMS</Link></li>
             </ul>
           </div>
           <div>

@@ -16,7 +16,8 @@ import {
   Sparkles,
   ShieldCheck,
   FileSearch,
-  CheckCircle2
+  CheckCircle2,
+  Users
 } from "lucide-react";
 
 export default function Home() {
@@ -52,6 +53,14 @@ export default function Home() {
       link: "/products/mendex-one",
       imageHint: "software workflow",
       icon: Layers
+    },
+    {
+      id: "mendex-one-hrms",
+      title: "MendexOne HRMS",
+      description: "Modern human resource management platform designed to simplify employee operations and automate HR workflows.",
+      link: "/products/mendex-one-hrms",
+      imageHint: "hr dashboard",
+      icon: Users
     }
   ];
 
@@ -92,7 +101,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden border-none shadow-2xl group transition-all hover:-translate-y-2">
               <div className="relative h-64 w-full">
@@ -169,8 +178,8 @@ export default function Home() {
               <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>
                 <Link href="/contact">Schedule a Demo</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-bold bg-white/10 border-white/20 hover:bg-white/20 text-white">
-                Talk to Our Team
+              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-bold bg-white/10 border-white/20 hover:bg-white/20 text-white" asChild>
+                <Link href="/contact">Talk to Our Team</Link>
               </Button>
             </div>
           </div>
