@@ -17,7 +17,8 @@ import {
   LayoutDashboard,
   AlertTriangle,
   TrendingUp,
-  Briefcase
+  Briefcase,
+  Globe
 } from "lucide-react";
 
 export default function VendorReadinessPage() {
