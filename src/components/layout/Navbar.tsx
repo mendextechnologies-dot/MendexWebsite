@@ -36,12 +36,30 @@ export function Navbar() {
               <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors focus:outline-none">
                 Products <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-48">
+              <DropdownMenuContent align="start" className="w-64">
                 <DropdownMenuItem asChild>
-                  <Link href="/products/ops-marketplace">OPS Marketplace</Link>
+                  <Link href="/products/ops-marketplace" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-bold">OPS Marketplace</span>
+                    <span className="text-xs text-muted-foreground">Expert Matching Platform</span>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products/mendex-one">MendexOne CRM</Link>
+                  <Link href="/products/tender-intelligence" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-bold">AI Tender Intelligence</span>
+                    <span className="text-xs text-muted-foreground">Analyze Tenders in Minutes</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/products/vendor-readiness" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-bold">PSU Vendor Readiness</span>
+                    <span className="text-xs text-muted-foreground">Get Vendor-Ready Faster</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/products/mendex-one" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-bold">MendexOne CRM</span>
+                    <span className="text-xs text-muted-foreground">Workflow-Driven Sales</span>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -73,6 +91,8 @@ export function Navbar() {
           <div className="flex flex-col gap-2 pl-4">
             <span className="text-muted-foreground text-sm uppercase font-bold">Products</span>
             <Link href="/products/ops-marketplace" className="text-lg" onClick={() => setIsOpen(false)}>OPS Marketplace</Link>
+            <Link href="/products/tender-intelligence" className="text-lg" onClick={() => setIsOpen(false)}>AI Tender Intelligence</Link>
+            <Link href="/products/vendor-readiness" className="text-lg" onClick={() => setIsOpen(false)}>PSU Vendor Readiness</Link>
             <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
           </div>
           <Link href="/services" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Services</Link>

@@ -24,6 +24,18 @@
       "description": "Engineering team working",
       "imageUrl": "https://picsum.photos/seed/mendex4/800/500",
       "imageHint": "office engineering"
+    },
+    {
+      "id": "tender-intelligence",
+      "description": "AI-powered document analysis interface",
+      "imageUrl": "https://picsum.photos/seed/tender1/800/600",
+      "imageHint": "document analysis"
+    },
+    {
+      "id": "vendor-readiness",
+      "description": "Vendor compliance dashboard",
+      "imageUrl": "https://picsum.photos/seed/vendor1/800/600",
+      "imageHint": "compliance dashboard"
     }
   ]
 }

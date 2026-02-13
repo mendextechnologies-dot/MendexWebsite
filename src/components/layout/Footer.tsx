@@ -21,6 +21,8 @@ export function Footer() {
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">Products</h4>
             <ul className="flex flex-col gap-2">
               <li><Link href="/products/ops-marketplace" className="text-sm text-muted-foreground hover:text-primary transition-colors">OPS Marketplace</Link></li>
+              <li><Link href="/products/tender-intelligence" className="text-sm text-muted-foreground hover:text-primary transition-colors">AI Tender Intelligence</Link></li>
+              <li><Link href="/products/vendor-readiness" className="text-sm text-muted-foreground hover:text-primary transition-colors">PSU Vendor Readiness</Link></li>
               <li><Link href="/products/mendex-one" className="text-sm text-muted-foreground hover:text-primary transition-colors">MendexOne CRM</Link></li>
             </ul>
           </div>
