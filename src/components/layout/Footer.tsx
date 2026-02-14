@@ -31,7 +31,8 @@ export function Footer() {
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">Company</h4>
             <ul className="flex flex-col gap-2">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Services</Link></li>
+              <li><Link href="/services/government-compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">Gov Compliance</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>

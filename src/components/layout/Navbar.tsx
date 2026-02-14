@@ -9,7 +9,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Landmark, Briefcase } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
@@ -70,7 +70,32 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/services" className="text-sm font-medium hover:text-primary transition-colors">Services</Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors focus:outline-none">
+                Services <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-80">
+                <DropdownMenuItem asChild>
+                  <Link href="/services" className="flex items-center gap-3 p-3">
+                    <Briefcase className="w-5 h-5 text-primary" />
+                    <div className="flex flex-col">
+                      <span className="font-bold">All Services</span>
+                      <span className="text-xs text-muted-foreground">Our full expertise portfolio</span>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/government-compliance" className="flex items-center gap-3 p-3">
+                    <Landmark className="w-5 h-5 text-accent" />
+                    <div className="flex flex-col">
+                      <span className="font-bold">Gov Business & Compliance</span>
+                      <span className="text-xs text-muted-foreground">Registration & Statutory Infra</span>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
             <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
           </div>
@@ -102,7 +127,11 @@ export function Navbar() {
             <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
             <Link href="/products/mendex-one-hrms" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne HRMS</Link>
           </div>
-          <Link href="/services" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Services</Link>
+          <div className="flex flex-col gap-2 pl-4">
+            <span className="text-muted-foreground text-sm uppercase font-bold">Services</span>
+            <Link href="/services" className="text-lg" onClick={() => setIsOpen(false)}>Overview</Link>
+            <Link href="/services/government-compliance" className="text-lg" onClick={() => setIsOpen(false)}>Gov Compliance</Link>
+          </div>
           <Link href="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
           <hr className="border-border" />
