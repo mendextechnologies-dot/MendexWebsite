@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,8 +6,6 @@ import {
   Globe, 
   BrainCircuit, 
   BarChart3, 
-  Cpu, 
-  Lock, 
   Zap, 
   Database 
 } from "lucide-react";
@@ -36,16 +33,6 @@ export default function ServicesPage() {
       desc: "Comprehensive roadmap design for companies looking to modernize their legacy systems and migrate to cloud-native architectures." 
     },
     { 
-      icon: Cpu, 
-      title: "IoT & Edge Computing", 
-      desc: "Developing low-latency systems for hardware-software integration and distributed sensor networks at scale." 
-    },
-    { 
-      icon: Lock, 
-      title: "Cybersecurity Engineering", 
-      desc: "Hardening enterprise applications through rigorous security audits, zero-trust implementation, and automated vulnerability scanning." 
-    },
-    { 
       icon: Zap, 
       title: "Performance Optimization", 
       desc: "Drastic latency reduction for critical business paths through code-level optimization and caching strategy redesign." 
@@ -71,7 +58,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
             <Card key={idx} className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
               <CardContent className="p-8">
