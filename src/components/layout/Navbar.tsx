@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -9,7 +8,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Menu, X, Landmark, Briefcase } from "lucide-react";
+import { ChevronDown, Menu, X, Landmark, Briefcase, Zap } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
@@ -93,6 +92,15 @@ export function Navbar() {
                     </div>
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/engineering-supply" className="flex items-center gap-3 p-3">
+                    <Zap className="w-5 h-5 text-primary" />
+                    <div className="flex flex-col">
+                      <span className="font-bold">Engineering & Electrical Supply</span>
+                      <span className="text-xs text-muted-foreground">Project-Driven Component Supply</span>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -131,6 +139,7 @@ export function Navbar() {
             <span className="text-muted-foreground text-sm uppercase font-bold">Services</span>
             <Link href="/services" className="text-lg" onClick={() => setIsOpen(false)}>Overview</Link>
             <Link href="/services/government-compliance" className="text-lg" onClick={() => setIsOpen(false)}>Gov Compliance</Link>
+            <Link href="/services/engineering-supply" className="text-lg" onClick={() => setIsOpen(false)}>Engineering Supply</Link>
           </div>
           <Link href="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Contact</Link>

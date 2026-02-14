@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export function Footer() {
@@ -33,6 +32,7 @@ export function Footer() {
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Services</Link></li>
               <li><Link href="/services/government-compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">Gov Compliance</Link></li>
+              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Engineering Supply</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
