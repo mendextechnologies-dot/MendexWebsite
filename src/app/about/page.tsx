@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
@@ -38,19 +37,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
             <div>
-              <span className="text-6xl font-bold text-primary block mb-4">10+</span>
+              <span className="text-6xl font-bold text-primary block mb-4">5+</span>
               <h4 className="text-xl font-bold mb-2">Years of Excellence</h4>
-              <p className="text-muted-foreground">Decades of combined experience in enterprise software.</p>
+              <p className="text-muted-foreground">Half a decade of dedicated experience in specialized enterprise software.</p>
             </div>
             <div>
-              <span className="text-6xl font-bold text-primary block mb-4">500+</span>
+              <span className="text-6xl font-bold text-primary block mb-4">10+</span>
               <h4 className="text-xl font-bold mb-2">Projects Delivered</h4>
-              <p className="text-muted-foreground">Successful launches for Fortune 500 and high-growth startups.</p>
+              <p className="text-muted-foreground">Successful launches for strategic enterprise partners and growing organizations.</p>
             </div>
             <div>
-              <span className="text-6xl font-bold text-primary block mb-4">40+</span>
+              <span className="text-6xl font-bold text-primary block mb-4">2</span>
               <h4 className="text-xl font-bold mb-2">Global Partners</h4>
-              <p className="text-muted-foreground">A vast network of vetted technology providers.</p>
+              <p className="text-muted-foreground">Collaborating with specialized technology providers for enhanced delivery.</p>
             </div>
           </div>
         </div>
