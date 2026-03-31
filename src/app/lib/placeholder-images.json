@@ -42,6 +42,12 @@
       "description": "HR Management dashboard",
       "imageUrl": "https://picsum.photos/seed/hrms1/800/600",
       "imageHint": "hr dashboard"
+    },
+    {
+      "id": "critical-power",
+      "description": "Industrial power electronics and rectifiers",
+      "imageUrl": "https://picsum.photos/seed/power99/800/600",
+      "imageHint": "industrial power"
     }
   ]
 }

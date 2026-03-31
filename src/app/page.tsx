@@ -17,18 +17,20 @@ import {
   ShieldCheck,
   FileSearch,
   CheckCircle2,
-  Users
+  Users,
+  Zap,
+  Activity
 } from "lucide-react";
 
 export default function Home() {
   const products = [
     {
-      id: "ops-marketplace",
-      title: "OPS Marketplace",
-      description: "Intelligent service platform designed to connect organizations with experts through AI-curated matching and structured execution.",
-      link: "/products/ops-marketplace",
-      imageHint: "marketplace dashboard",
-      icon: BrainCircuit
+      id: "critical-power",
+      title: "Critical Power Solutions",
+      description: "Custom-built DC power systems, industrial rectifiers, and specialized electrical devices engineered for precision and reliability.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial power",
+      icon: Zap
     },
     {
       id: "tender-intelligence",
@@ -37,6 +39,14 @@ export default function Home() {
       link: "/products/tender-intelligence",
       imageHint: "document analysis",
       icon: FileSearch
+    },
+    {
+      id: "ops-marketplace",
+      title: "OPS Marketplace",
+      description: "Intelligent service platform designed to connect organizations with experts through AI-curated matching and structured execution.",
+      link: "/products/ops-marketplace",
+      imageHint: "marketplace dashboard",
+      icon: BrainCircuit
     },
     {
       id: "vendor-readiness",
@@ -73,31 +83,31 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 text-secondary-foreground text-xs font-semibold mb-8 border border-border">
             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-            Building Procurement Intelligence Infrastructure
+            Where Power Meets Precision
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 max-w-5xl mx-auto leading-tight tracking-tight">
-            Engineering <span className="text-primary italic">Intelligent Platforms</span> for Enterprise Scale
+            Engineering <span className="text-primary italic">Critical Infrastructure</span> for Enterprise Scale
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Mendex builds specialized AI-driven ecosystems designed to transform government tenders, procurement, and expert services.
+            MENDEX builds specialized power systems and AI-driven ecosystems designed to transform industrial operations and procurement.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="h-14 px-8 text-lg font-medium" asChild>
-              <Link href="/products/tender-intelligence">Explore Solutions</Link>
+              <Link href="/services/engineering-supply">Power Solutions</Link>
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-medium" asChild>
-              <Link href="/contact">Talk to Our Team</Link>
+              <Link href="/products/tender-intelligence">Intelligence Platforms</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Product Section */}
+      {/* Main Ecosystem Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Procurement & Strategy Ecosystem</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Engineering & Strategy Ecosystem</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Specialized platforms built to solve complex organizational challenges at every stage of the lifecycle.
+            Specialized solutions built to solve complex organizational challenges at the intersection of power and intelligence.
           </p>
         </div>
 
@@ -135,21 +145,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Strategic Services */}
+      {/* Core Expertise Summary */}
       <section className="py-24 bg-muted/30 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Capabilities</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We provide deep technical expertise across critical areas of modern enterprise engineering.
+              Deep technical expertise across critical power engineering and modern digital systems.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Layers, title: "Enterprise Software Development", desc: "Custom end-to-end systems built for reliability and scale." },
-              { icon: Globe, title: "Cloud & Platform Engineering", desc: "Modern cloud-native infrastructure and deployment architectures." },
-              { icon: BrainCircuit, title: "AI & Intelligent Systems", desc: "Integrating cognitive capabilities into your core business processes." },
-              { icon: BarChart3, title: "Digital Transformation Consulting", desc: "Strategic roadmapping for modernizing legacy enterprise stacks." },
+              { icon: Zap, title: "Critical Power Systems", desc: "Design and manufacturing of industrial DC power and rectifiers." },
+              { icon: Activity, title: "Pulsed Power & Research", desc: "Specialized high-energy systems for testing and laboratories." },
+              { icon: BrainCircuit, title: "AI & Intelligent Systems", desc: "Integrating cognitive capabilities into core business processes." },
+              { icon: ShieldCheck, title: "Gov-Compliance Ready", desc: "Built to meet stringent PSU and industrial statutory standards." },
             ].map((service, idx) => (
               <div key={idx} className="bg-background p-8 rounded-2xl border border-border hover:border-accent transition-colors">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
@@ -170,13 +180,13 @@ export default function Home() {
              <Sparkles className="w-64 h-64" />
           </div>
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Transform Your Strategy?</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8">Built for Performance. Delivered with Precision.</h2>
             <p className="text-xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto">
-              Whether you're analyzing tenders or preparing vendors — we have the intelligence infrastructure to help you win.
+              From high-voltage power systems to AI-driven strategy — we build the infrastructure you need to win.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>
-                <Link href="/contact">Schedule a Demo</Link>
+                <Link href="/contact">Get Technical Quote</Link>
               </Button>
               <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-bold bg-white/10 border-white/20 hover:bg-white/20 text-white" asChild>
                 <Link href="/contact">Talk to Our Team</Link>

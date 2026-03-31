@@ -24,7 +24,7 @@ export default function ContactPage() {
       setIsSubmitting(false);
       toast({
         title: "Message Sent",
-        description: "We've received your inquiry and will get back to you within 24 hours.",
+        description: "We've received your inquiry and our engineering team will get back to you shortly.",
       });
       (e.target as HTMLFormElement).reset();
     }, 1500);
@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-8">Let's talk about your project.</h1>
               <p className="text-xl text-muted-foreground mb-12">
-                We're ready to help you build the next generation of your enterprise technology stack.
+                Whether it's a critical power system or a strategic digital platform — our team is ready to support your requirements.
               </p>
               
               <div className="space-y-8">
@@ -50,7 +50,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold">Email Us</h4>
-                    <p className="text-muted-foreground">hello@mendex.platform</p>
+                    <p className="text-muted-foreground">admin@mendex.in</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold">Call Us</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 96655 14562</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -67,8 +67,8 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold">Our Headquarters</h4>
-                    <p className="text-muted-foreground">101 Engineering Way, Palo Alto, CA</p>
+                    <h4 className="font-bold">Engineering HQ</h4>
+                    <p className="text-muted-foreground">Industrial Hub, Pune, MH, India</p>
                   </div>
                 </div>
               </div>
@@ -78,9 +78,9 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-accent" />
-                  Send a Message
+                  Submit Requirement
                 </CardTitle>
-                <CardDescription>Tell us about your needs and our team will be in touch shortly.</CardDescription>
+                <CardDescription>Tell us about your technical specifications or project needs.</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -99,12 +99,12 @@ export default function ContactPage() {
                     <Input id="email" type="email" placeholder="john@company.com" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="Project Inquiry" required />
+                    <Label htmlFor="subject">Subject / Technical Area</Label>
+                    <Input id="subject" placeholder="e.g. DC Power Supply Quote" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Describe your project requirements..." className="min-h-[150px]" required />
+                    <Label htmlFor="message">Message / Specifications</Label>
+                    <Textarea id="message" placeholder="Describe voltage, current, load characteristics or project scope..." className="min-h-[150px]" required />
                   </div>
                   <Button type="submit" className="w-full h-12" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
