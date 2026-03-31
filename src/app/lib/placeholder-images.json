@@ -3,50 +3,50 @@
   "placeholderImages": [
     {
       "id": "hero-abstract",
-      "description": "Abstract tech background",
-      "imageUrl": "https://picsum.photos/seed/mendex1/1200/800",
-      "imageHint": "abstract technology"
+      "description": "High-tech abstract circuit background",
+      "imageUrl": "https://picsum.photos/seed/mendex-tech/1200/800",
+      "imageHint": "circuit board"
     },
     {
       "id": "ops-marketplace",
-      "description": "Service marketplace dashboard",
-      "imageUrl": "https://picsum.photos/seed/mendex2/800/600",
-      "imageHint": "marketplace dashboard"
+      "description": "Professional expert marketplace interface",
+      "imageUrl": "https://picsum.photos/seed/mendex-ops/800/600",
+      "imageHint": "expert marketplace"
     },
     {
       "id": "mendex-one",
-      "description": "CRM workflow automation",
-      "imageUrl": "https://picsum.photos/seed/mendex3/800/600",
-      "imageHint": "software workflow"
+      "description": "Enterprise CRM dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex-crm/800/600",
+      "imageHint": "crm dashboard"
     },
     {
       "id": "enterprise-team",
-      "description": "Engineering team working",
-      "imageUrl": "https://picsum.photos/seed/mendex4/800/500",
-      "imageHint": "office engineering"
+      "description": "Modern engineering office team",
+      "imageUrl": "https://picsum.photos/seed/mendex-team/800/500",
+      "imageHint": "engineering office"
     },
     {
       "id": "tender-intelligence",
-      "description": "AI-powered document analysis interface",
-      "imageUrl": "https://picsum.photos/seed/tender1/800/600",
-      "imageHint": "document analysis"
+      "description": "AI document analysis and scanning",
+      "imageUrl": "https://picsum.photos/seed/mendex-tender/800/600",
+      "imageHint": "document intelligence"
     },
     {
       "id": "vendor-readiness",
-      "description": "Vendor compliance dashboard",
-      "imageUrl": "https://picsum.photos/seed/vendor1/800/600",
-      "imageHint": "compliance dashboard"
+      "description": "Compliance and certification dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex-vendor/800/600",
+      "imageHint": "quality compliance"
     },
     {
       "id": "mendex-one-hrms",
-      "description": "HR Management dashboard",
-      "imageUrl": "https://picsum.photos/seed/hrms1/800/600",
-      "imageHint": "hr dashboard"
+      "description": "Human resources management system",
+      "imageUrl": "https://picsum.photos/seed/mendex-hrms/800/600",
+      "imageHint": "hr system"
     },
     {
       "id": "critical-power",
-      "description": "Industrial power electronics and rectifiers",
-      "imageUrl": "https://picsum.photos/seed/power99/800/600",
+      "description": "Industrial power systems and electronics",
+      "imageUrl": "https://picsum.photos/seed/mendex-power/800/600",
       "imageHint": "industrial power"
     }
   ]

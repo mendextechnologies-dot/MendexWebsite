@@ -37,7 +37,7 @@ export default function Home() {
       title: "AI Tender Intelligence",
       description: "Analyze complex government tenders in minutes. Reduce compliance errors with AI-powered document intelligence.",
       link: "/products/tender-intelligence",
-      imageHint: "document analysis",
+      imageHint: "document intelligence",
       icon: FileSearch
     },
     {
@@ -45,7 +45,7 @@ export default function Home() {
       title: "OPS Marketplace",
       description: "Intelligent service platform designed to connect organizations with experts through AI-curated matching and structured execution.",
       link: "/products/ops-marketplace",
-      imageHint: "marketplace dashboard",
+      imageHint: "expert marketplace",
       icon: BrainCircuit
     },
     {
@@ -53,7 +53,7 @@ export default function Home() {
       title: "PSU Vendor Readiness",
       description: "Get vendor-ready before the tender comes. Evaluate your eligibility and close documentation gaps with automated scoring.",
       link: "/products/vendor-readiness",
-      imageHint: "compliance dashboard",
+      imageHint: "quality compliance",
       icon: CheckCircle2
     },
     {
@@ -61,7 +61,7 @@ export default function Home() {
       title: "MendexOne CRM",
       description: "Modern CRM platform designed for workflow-driven business management with automation and scalable architecture.",
       link: "/products/mendex-one",
-      imageHint: "software workflow",
+      imageHint: "crm dashboard",
       icon: Layers
     },
     {
@@ -69,7 +69,7 @@ export default function Home() {
       title: "MendexOne HRMS",
       description: "Modern human resource management platform designed to simplify employee operations and automate HR workflows.",
       link: "/products/mendex-one-hrms",
-      imageHint: "hr dashboard",
+      imageHint: "hr system",
       icon: Users
     }
   ];
