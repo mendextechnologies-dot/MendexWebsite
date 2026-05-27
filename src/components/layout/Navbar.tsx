@@ -37,21 +37,9 @@ export function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-64">
                 <DropdownMenuItem asChild>
-                  <Link href="/products/ops-marketplace" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">OPS Marketplace</span>
-                    <span className="text-xs text-muted-foreground">Expert Matching Platform</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <Link href="/products/tender-intelligence" className="flex flex-col items-start gap-1 p-3">
                     <span className="font-bold">AI Tender Intelligence</span>
                     <span className="text-xs text-muted-foreground">Analyze Tenders in Minutes</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/products/vendor-readiness" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">PSU Vendor Readiness</span>
-                    <span className="text-xs text-muted-foreground">Get Vendor-Ready Faster</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -120,9 +108,7 @@ export function Navbar() {
           <Link href="/" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Home</Link>
           <div className="flex flex-col gap-2 pl-4">
             <span className="text-muted-foreground text-sm uppercase font-bold">Products</span>
-            <Link href="/products/ops-marketplace" className="text-lg" onClick={() => setIsOpen(false)}>OPS Marketplace</Link>
             <Link href="/products/tender-intelligence" className="text-lg" onClick={() => setIsOpen(false)}>AI Tender Intelligence</Link>
-            <Link href="/products/vendor-readiness" className="text-lg" onClick={() => setIsOpen(false)}>PSU Vendor Readiness</Link>
             <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
             <Link href="/products/mendex-one-hrms" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne HRMS</Link>
           </div>

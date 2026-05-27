@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -41,27 +40,11 @@ export default function Home() {
       icon: FileSearch
     },
     {
-      id: "ops-marketplace",
-      title: "OPS Marketplace",
-      description: "Intelligent service platform designed to connect organizations with experts through AI-curated matching and structured execution.",
-      link: "/products/ops-marketplace",
-      imageHint: "expert marketplace",
-      icon: BrainCircuit
-    },
-    {
-      id: "vendor-readiness",
-      title: "PSU Vendor Readiness",
-      description: "Get vendor-ready before the tender comes. Evaluate your eligibility and close documentation gaps with automated scoring.",
-      link: "/products/vendor-readiness",
-      imageHint: "quality compliance",
-      icon: CheckCircle2
-    },
-    {
       id: "mendex-one",
       title: "MendexOne CRM",
       description: "Modern CRM platform designed for workflow-driven business management with automation and scalable architecture.",
       link: "/products/mendex-one",
-      imageHint: "crm dashboard",
+      imageHint: "software workflow",
       icon: Layers
     },
     {
@@ -69,7 +52,7 @@ export default function Home() {
       title: "MendexOne HRMS",
       description: "Modern human resource management platform designed to simplify employee operations and automate HR workflows.",
       link: "/products/mendex-one-hrms",
-      imageHint: "hr system",
+      imageHint: "hr dashboard",
       icon: Users
     }
   ];
@@ -111,7 +94,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden border-none shadow-2xl group transition-all hover:-translate-y-2">
               <div className="relative h-64 w-full">
