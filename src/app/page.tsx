@@ -46,7 +46,7 @@ export default function Home() {
       title: "MendexOne CRM",
       description: "Modern CRM platform designed for workflow-driven business management with automation and scalable architecture.",
       link: "/products/mendex-one",
-      imageHint: "software workflow",
+      imageHint: "software dashboard",
       icon: Layers
     },
     {
@@ -163,7 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Expertise Summary - Expanded */}
+      {/* Core Expertise Summary */}
       <section className="py-24 bg-muted/30 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -219,29 +219,6 @@ export default function Home() {
               </ul>
               <Button size="lg" asChild>
                 <Link href="/services/engineering-supply">Explore Power Solutions</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call To Action */}
-      <section className="py-24 px-4">
-        <div className="max-w-5xl mx-auto bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-8 text-white/5">
-             <Sparkles className="w-64 h-64" />
-          </div>
-          <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">Built for Performance. Delivered with Precision.</h2>
-            <p className="text-xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto">
-              From high-voltage power systems to AI-driven strategy — we build the infrastructure you need to win.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>
-                <Link href="/contact">Get Technical Quote</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-bold bg-white/10 border-white/20 hover:bg-white/20 text-white" asChild>
-                <Link href="/contact">Talk to Our Team</Link>
               </Button>
             </div>
           </div>
