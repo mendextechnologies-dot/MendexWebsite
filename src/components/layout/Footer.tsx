@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export function Footer() {
@@ -30,7 +29,6 @@ export function Footer() {
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">Services</h4>
             <ul className="flex flex-col gap-2">
               <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Power Electronics</Link></li>
-              <li><Link href="/services/government-compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">Gov Compliance</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Digital Services</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Custom Quote</Link></li>
             </ul>
