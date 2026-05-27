@@ -11,19 +11,19 @@
       "id": "mendex-one",
       "description": "Business software dashboard",
       "imageUrl": "https://picsum.photos/seed/mendex-ds-12/800/600",
-      "imageHint": "business dashboard"
+      "imageHint": "software dashboard"
     },
     {
       "id": "enterprise-team",
       "description": "Engineering team meeting",
       "imageUrl": "https://picsum.photos/seed/mendex-team-88/800/500",
-      "imageHint": "office meeting"
+      "imageHint": "office engineering"
     },
     {
       "id": "tender-intelligence",
       "description": "AI document analysis software",
       "imageUrl": "https://picsum.photos/seed/mendex-data-55/800/600",
-      "imageHint": "data analysis"
+      "imageHint": "document intelligence"
     },
     {
       "id": "mendex-one-hrms",
@@ -35,7 +35,7 @@
       "id": "critical-power",
       "description": "Industrial electronics and hardware",
       "imageUrl": "https://picsum.photos/seed/mendex-elec-44/800/600",
-      "imageHint": "electronics hardware"
+      "imageHint": "industrial power"
     }
   ]
 }
