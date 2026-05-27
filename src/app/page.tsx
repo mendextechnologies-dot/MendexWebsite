@@ -18,7 +18,8 @@ import {
   CheckCircle2,
   Users,
   Zap,
-  Activity
+  Activity,
+  Database
 } from "lucide-react";
 
 export default function Home() {
@@ -57,6 +58,39 @@ export default function Home() {
     }
   ];
 
+  const coreExpertise = [
+    { 
+      icon: Layers, 
+      title: "Enterprise Software Development", 
+      desc: "Architecting and building scalable backend systems and high-performance frontend applications." 
+    },
+    { 
+      icon: Globe, 
+      title: "Cloud & Platform Engineering", 
+      desc: "Infrastructure as Code, Kubernetes orchestration, and multi-cloud strategies for maximum uptime." 
+    },
+    { 
+      icon: BrainCircuit, 
+      title: "AI & Intelligent Systems", 
+      desc: "Implementation of Generative AI, machine learning pipelines, and intelligent automation." 
+    },
+    { 
+      icon: BarChart3, 
+      title: "Digital Transformation", 
+      desc: "Modernizing legacy systems and migrating to cloud-native architectures for enterprise scale." 
+    },
+    { 
+      icon: Zap, 
+      title: "Performance Optimization", 
+      desc: "Drastic latency reduction for critical business paths through code-level optimization." 
+    },
+    { 
+      icon: Database, 
+      title: "Data Engineering", 
+      desc: "Building robust ETL pipelines and real-time streaming architectures for large-scale data." 
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -72,7 +106,7 @@ export default function Home() {
             Engineering <span className="text-primary italic">Critical Infrastructure</span> for Enterprise Scale
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            MENDEX builds specialized power systems and AI-driven ecosystems designed to transform industrial operations and procurement.
+            MENDEX Technologies builds specialized power systems and AI-driven ecosystems designed to transform industrial operations and procurement.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="h-14 px-8 text-lg font-medium" asChild>
@@ -128,30 +162,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Expertise Summary */}
+      {/* Core Expertise Summary - Expanded */}
       <section className="py-24 bg-muted/30 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Digital Capabilities</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Deep technical expertise across critical power engineering and modern digital systems.
+              Deep technical capability across the entire stack of modern enterprise computing.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Zap, title: "Critical Power Systems", desc: "Design and manufacturing of industrial DC power and rectifiers." },
-              { icon: Activity, title: "Pulsed Power & Research", desc: "Specialized high-energy systems for testing and laboratories." },
-              { icon: BrainCircuit, title: "AI & Intelligent Systems", desc: "Integrating cognitive capabilities into core business processes." },
-              { icon: ShieldCheck, title: "Gov-Compliance Ready", desc: "Built to meet stringent PSU and industrial statutory standards." },
-            ].map((service, idx) => (
-              <div key={idx} className="bg-background p-8 rounded-2xl border border-border hover:border-accent transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreExpertise.map((service, idx) => (
+              <div key={idx} className="bg-background p-8 rounded-2xl border border-border hover:border-accent transition-colors shadow-sm">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground">{service.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Engineering Focus Brief */}
+      <section className="py-24 px-4 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
+              <Image 
+                src={PlaceHolderImages.find(img => img.id === "critical-power")?.imageUrl || ""}
+                alt="Power Infrastructure"
+                fill
+                className="object-cover"
+                data-ai-hint="industrial power"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Engineering-Focused Approach</h2>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                We understand that every application has unique electrical, thermal, control, and operational requirements. MENDEX specializes in high current, high voltage, and application-oriented power systems.
+              </p>
+              <ul className="space-y-4 mb-10">
+                {[
+                  "High Current & High Voltage Expertise",
+                  "Custom Requirement Support",
+                  "Reliable Technical Supply",
+                  "Solution-Oriented Engineering"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3 font-semibold">
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" asChild>
+                <Link href="/services/engineering-supply">Explore Power Solutions</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

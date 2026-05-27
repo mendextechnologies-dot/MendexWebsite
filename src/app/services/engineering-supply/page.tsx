@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Navbar } from "@/components/layout/Navbar";
@@ -24,7 +23,10 @@ import {
   Upload,
   BatteryCharging,
   Activity,
-  Box
+  Box,
+  Layers,
+  BrainCircuit,
+  Database
 } from "lucide-react";
 import Link from "next/link";
 
@@ -90,6 +92,15 @@ export default function EngineeringSupplyPage() {
         "Industrial Protection products"
       ]
     }
+  ];
+
+  const digitalExpertise = [
+    { icon: Layers, title: "Enterprise Software", desc: "Scalable backend and frontend systems." },
+    { icon: Globe, title: "Cloud Engineering", desc: "Maximum uptime with K8s orchestration." },
+    { icon: BrainCircuit, title: "AI & Intelligence", desc: "Generative AI and machine learning." },
+    { icon: BarChart3, title: "Digital Strategy", desc: "Modernizing legacy enterprise systems." },
+    { icon: Zap, title: "Optimization", desc: "Code-level performance enhancements." },
+    { icon: Database, title: "Data Pipelines", desc: "Robust ETL and real-time streaming." },
   ];
 
   const industries = [
@@ -167,8 +178,29 @@ export default function EngineeringSupplyPage() {
         </div>
       </section>
 
+      {/* Integrated Capabilities Section */}
+      <section className="py-24 px-4 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Integrated Strategic Capabilities</h2>
+            <p className="text-muted-foreground">Complementing our hardware engineering with world-class digital systems.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {digitalExpertise.map((item, idx) => (
+              <div key={idx} className="bg-background p-6 rounded-xl border border-border text-center flex flex-col items-center group hover:border-primary transition-colors">
+                <div className="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <item.icon className="w-5 h-5" />
+                </div>
+                <h4 className="font-bold text-xs mb-2">{item.title}</h4>
+                <p className="text-[10px] text-muted-foreground leading-tight">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Custom Requirement Support */}
-      <section className="py-24 px-4 bg-muted/10">
+      <section className="py-24 px-4 bg-white border-y border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl bg-primary/5 p-12 flex items-center justify-center">
              <div className="space-y-6 text-center">
@@ -204,12 +236,12 @@ export default function EngineeringSupplyPage() {
       </section>
 
       {/* Industries Served */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 text-center">Industries We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industries.map((industry, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <div key={idx} className="flex flex-col items-center text-center p-6 rounded-2xl border border-border bg-white hover:border-primary/50 transition-colors shadow-sm">
                 <div className="w-16 h-16 bg-muted/30 rounded-full flex items-center justify-center mb-4 text-primary">
                   <industry.icon className="w-8 h-8" />
                 </div>
