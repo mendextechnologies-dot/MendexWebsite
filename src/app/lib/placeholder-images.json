@@ -3,39 +3,39 @@
   "placeholderImages": [
     {
       "id": "hero-abstract",
-      "description": "High-tech server room infrastructure",
-      "imageUrl": "https://picsum.photos/seed/mendex-srv-99/1200/800",
-      "imageHint": "server room"
+      "description": "High-tech data center infrastructure",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&h=800&auto=format&fit=crop",
+      "imageHint": "data center"
     },
     {
       "id": "mendex-one",
-      "description": "Business software dashboard",
-      "imageUrl": "https://picsum.photos/seed/mendex-ds-12/800/600",
+      "description": "Enterprise CRM software dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex-crm-01/800/600",
       "imageHint": "software dashboard"
     },
     {
       "id": "enterprise-team",
-      "description": "Engineering team meeting",
-      "imageUrl": "https://picsum.photos/seed/mendex-team-88/800/500",
-      "imageHint": "office engineering"
+      "description": "Professional engineering team meeting",
+      "imageUrl": "https://picsum.photos/seed/mendex-eng-02/800/500",
+      "imageHint": "engineering team"
     },
     {
       "id": "tender-intelligence",
-      "description": "AI document analysis software",
-      "imageUrl": "https://picsum.photos/seed/mendex-data-55/800/600",
+      "description": "AI-powered document analysis interface",
+      "imageUrl": "https://picsum.photos/seed/mendex-ai-03/800/600",
       "imageHint": "document intelligence"
     },
     {
       "id": "mendex-one-hrms",
-      "description": "Human resources dashboard",
-      "imageUrl": "https://picsum.photos/seed/mendex-hr-22/800/600",
-      "imageHint": "hr dashboard"
+      "description": "Modern HR management platform",
+      "imageUrl": "https://picsum.photos/seed/mendex-hrms-04/800/600",
+      "imageHint": "hr software"
     },
     {
       "id": "critical-power",
-      "description": "Industrial electronics and hardware",
-      "imageUrl": "https://picsum.photos/seed/mendex-elec-44/800/600",
-      "imageHint": "industrial power"
+      "description": "Server room infrastructure and power units",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&h=600&auto=format&fit=crop",
+      "imageHint": "server room"
     }
   ]
 }
