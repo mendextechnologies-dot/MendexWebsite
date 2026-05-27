@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -30,7 +29,7 @@ export default function Home() {
       title: "Critical Power Solutions",
       description: "Custom-built DC power systems, industrial rectifiers, and specialized electrical devices engineered for precision and reliability.",
       link: "/services/engineering-supply",
-      imageHint: "industrial power",
+      imageHint: "industrial electronics",
       icon: Zap
     },
     {
@@ -38,7 +37,7 @@ export default function Home() {
       title: "AI Tender Intelligence",
       description: "Analyze complex government tenders in minutes. Reduce compliance errors with AI-powered document intelligence.",
       link: "/products/tender-intelligence",
-      imageHint: "document intelligence",
+      imageHint: "data analysis",
       icon: FileSearch
     },
     {
@@ -54,7 +53,7 @@ export default function Home() {
       title: "MendexOne HRMS",
       description: "Modern human resource management platform designed to simplify employee operations and automate HR workflows.",
       link: "/products/mendex-one-hrms",
-      imageHint: "hr dashboard",
+      imageHint: "hr management",
       icon: Users
     }
   ];
@@ -77,7 +76,7 @@ export default function Home() {
     },
     { 
       icon: BarChart3, 
-      title: "Digital Transformation", 
+      title: "Digital Strategy", 
       desc: "Modernizing legacy systems and migrating to cloud-native architectures for enterprise scale." 
     },
     { 
@@ -107,7 +106,7 @@ export default function Home() {
             Engineering <span className="text-primary italic">Critical Infrastructure</span> for Enterprise Scale
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            MENDEX Technologies builds specialized power systems and AI-driven ecosystems designed to transform industrial operations and procurement.
+            MENDEX Technologies builds specialized power systems and AI-driven ecosystems designed to transform industrial operations.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="h-14 px-8 text-lg font-medium" asChild>
@@ -120,16 +119,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Ecosystem Section */}
+      {/* Ecosystem Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Engineering & Strategy Ecosystem</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Engineering & Intelligence Ecosystem</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Specialized solutions built to solve complex organizational challenges at the intersection of power and intelligence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden border-none shadow-2xl group transition-all hover:-translate-y-2">
               <div className="relative h-64 w-full">
@@ -196,7 +195,7 @@ export default function Home() {
                 alt="Power Infrastructure"
                 fill
                 className="object-cover"
-                data-ai-hint="industrial power"
+                data-ai-hint="industrial electronics"
               />
             </div>
             <div>
@@ -209,7 +208,7 @@ export default function Home() {
                   "High Current & High Voltage Expertise",
                   "Custom Requirement Support",
                   "Reliable Technical Supply",
-                  "Solution-Oriented Engineering"
+                  "Commitment to Precision"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 font-semibold">
                     <CheckCircle2 className="w-5 h-5 text-accent" />

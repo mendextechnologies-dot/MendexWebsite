@@ -9,28 +9,29 @@ import {
   Settings, 
   ShieldCheck, 
   Globe, 
-  Workflow, 
   Target, 
   Briefcase, 
   Factory, 
-  FileText, 
   CheckCircle2, 
   HardHat, 
-  Truck, 
   Building2, 
   Cpu,
   ArrowRight,
   Upload,
   BatteryCharging,
   Activity,
-  Box,
   Layers,
   BrainCircuit,
-  Database
+  Database,
+  BarChart3
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 
 export default function EngineeringSupplyPage() {
+  const heroImage = PlaceHolderImages.find(img => img.id === "critical-power");
+
   const coreSolutions = [
     {
       title: "DC Power Supplies",
@@ -121,26 +122,34 @@ export default function EngineeringSupplyPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              Critical Power Solutions Vertical
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                Critical Power Solutions Vertical
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
+                Custom Electrical & <span className="text-primary italic">Critical Power Systems</span>
+              </h1>
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+                MENDEX Technologies specializes in application-specific power systems for industrial, utility, research, and mission-critical environments.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="h-14 px-8 text-lg" asChild>
+                  <Link href="/contact">Request Custom Quote</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="h-14 px-8 text-lg gap-2" asChild>
+                  <Link href="/contact"><Upload className="w-5 h-5" /> Submit Specifications</Link>
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
-              Custom Electrical & <span className="text-primary italic">Critical Power Systems</span>
-            </h1>
-            <p className="text-xl font-medium text-foreground/80 mb-6 italic">
-              "Where Power Meets Precision — Built for performance, designed for reliability."
-            </p>
-            <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl">
-              MENDEX Technologies specializes in application-specific power systems for industrial, utility, research, and mission-critical environments.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="h-14 px-8 text-lg" asChild>
-                <Link href="/contact">Request Custom Quote</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-lg gap-2" asChild>
-                <Link href="/contact"><Upload className="w-5 h-5" /> Submit Technical Specification</Link>
-              </Button>
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-border border">
+              <Image 
+                src={heroImage?.imageUrl || ""}
+                alt="Critical Infrastructure"
+                fill
+                className="object-cover"
+                data-ai-hint="industrial electronics"
+              />
             </div>
           </div>
         </div>
@@ -178,21 +187,21 @@ export default function EngineeringSupplyPage() {
         </div>
       </section>
 
-      {/* Integrated Capabilities Section */}
+      {/* At a Glance Expertise */}
       <section className="py-24 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Integrated Strategic Capabilities</h2>
-            <p className="text-muted-foreground">Complementing our hardware engineering with world-class digital systems.</p>
+            <p className="text-muted-foreground">Complementing hardware engineering with digital ecosystems.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {digitalExpertise.map((item, idx) => (
-              <div key={idx} className="bg-background p-6 rounded-xl border border-border text-center flex flex-col items-center group hover:border-primary transition-colors">
-                <div className="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                  <item.icon className="w-5 h-5" />
+              <div key={idx} className="bg-background p-8 rounded-2xl border border-border group hover:border-primary transition-colors shadow-sm">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <item.icon className="w-6 h-6" />
                 </div>
-                <h4 className="font-bold text-xs mb-2">{item.title}</h4>
-                <p className="text-[10px] text-muted-foreground leading-tight">{item.desc}</p>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -201,35 +210,36 @@ export default function EngineeringSupplyPage() {
 
       {/* Custom Requirement Support */}
       <section className="py-24 px-4 bg-white border-y border-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl bg-primary/5 p-12 flex items-center justify-center">
-             <div className="space-y-6 text-center">
-                <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm">
-                   <Settings className="w-12 h-12 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold">Custom Requirement Support</h3>
-                <p className="text-sm text-muted-foreground max-w-sm">
-                  We work with customers based on voltage, current, duty cycle, load characteristics, and installation environment.
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-primary rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 text-white/5">
+              <Settings className="w-64 h-64" />
+            </div>
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold mb-8">Custom Requirement Support</h2>
+                <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
+                  We work with customers based on voltage requirement, current rating, duty cycle, load characteristics, and application-specific design needs.
                 </p>
-             </div>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Solution-Oriented Engineering</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Whether your requirement involves a complete power system, a special-purpose electrical device, or a critical replacement component, MENDEX Technologies is equipped to support your application.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Voltage & Current Specific Design",
-                "Thermal & Cooling Analysis",
-                "Complex Load Characteristics",
-                "Environmental Protection Specs"
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-semibold text-sm">{item}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Thermal & Cooling Analysis",
+                    "Environmental Protection",
+                    "Complex Load Support",
+                    "Special-purpose Devices"
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
+                      <span className="font-medium">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="flex justify-center">
+                <Button size="lg" variant="secondary" className="h-16 px-10 text-lg font-bold" asChild>
+                  <Link href="/contact">Consult Engineering Team</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -241,31 +251,13 @@ export default function EngineeringSupplyPage() {
           <h2 className="text-3xl font-bold mb-16 text-center">Industries We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industries.map((industry, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center p-6 rounded-2xl border border-border bg-white hover:border-primary/50 transition-colors shadow-sm">
+              <div key={idx} className="flex flex-col items-center text-center p-8 rounded-2xl border border-border bg-white hover:border-primary/50 transition-colors shadow-sm">
                 <div className="w-16 h-16 bg-muted/30 rounded-full flex items-center justify-center mb-4 text-primary">
                   <industry.icon className="w-8 h-8" />
                 </div>
                 <span className="text-sm font-bold leading-tight">{industry.label}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 px-4 text-center bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to Power Your Infrastructure?</h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            Speak to our engineering team about your specific power and technical supply needs.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="h-14 px-10 text-lg gap-2" asChild>
-              <Link href="/contact">Request Technical Quote <ArrowRight className="w-5 h-5" /></Link>
-            </Button>
-            <Button size="lg" variant="outline" className="h-14 px-10 text-lg" asChild>
-              <Link href="/contact">Talk to Engineering Team</Link>
-            </Button>
           </div>
         </div>
       </section>
