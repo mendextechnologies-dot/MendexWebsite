@@ -3,39 +3,39 @@
   "placeholderImages": [
     {
       "id": "hero-abstract",
-      "description": "High-tech abstract circuit background",
-      "imageUrl": "https://picsum.photos/seed/mendex-tech-hero/1200/800",
-      "imageHint": "industrial circuit"
+      "description": "High-tech server room infrastructure",
+      "imageUrl": "https://picsum.photos/seed/mendex-srv-99/1200/800",
+      "imageHint": "server room"
     },
     {
       "id": "mendex-one",
-      "description": "Enterprise CRM dashboard",
-      "imageUrl": "https://picsum.photos/seed/mendex-crm-ui/800/600",
-      "imageHint": "software dashboard"
+      "description": "Business software dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex-ds-12/800/600",
+      "imageHint": "business dashboard"
     },
     {
       "id": "enterprise-team",
-      "description": "Modern engineering office team",
-      "imageUrl": "https://picsum.photos/seed/mendex-engineering-team/800/500",
-      "imageHint": "engineering office"
+      "description": "Engineering team meeting",
+      "imageUrl": "https://picsum.photos/seed/mendex-team-88/800/500",
+      "imageHint": "office meeting"
     },
     {
       "id": "tender-intelligence",
-      "description": "AI document analysis and scanning",
-      "imageUrl": "https://picsum.photos/seed/mendex-ai-docs/800/600",
-      "imageHint": "document intelligence"
+      "description": "AI document analysis software",
+      "imageUrl": "https://picsum.photos/seed/mendex-data-55/800/600",
+      "imageHint": "data analysis"
     },
     {
       "id": "mendex-one-hrms",
-      "description": "Human resources management system",
-      "imageUrl": "https://picsum.photos/seed/mendex-hrms-dashboard/800/600",
-      "imageHint": "hr system"
+      "description": "Human resources dashboard",
+      "imageUrl": "https://picsum.photos/seed/mendex-hr-22/800/600",
+      "imageHint": "hr dashboard"
     },
     {
       "id": "critical-power",
-      "description": "Industrial power systems and electronics",
-      "imageUrl": "https://picsum.photos/seed/mendex-industrial-power/800/600",
-      "imageHint": "industrial power"
+      "description": "Industrial electronics and hardware",
+      "imageUrl": "https://picsum.photos/seed/mendex-elec-44/800/600",
+      "imageHint": "electronics hardware"
     }
   ]
 }
