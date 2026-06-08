@@ -55,6 +55,14 @@ export default function Home() {
       link: "/products/mendex-one-hrms",
       imageHint: "hr management",
       icon: Users
+    },
+    {
+      id: "swacomply",
+      title: "SwaComply",
+      description: "Simplify statutory compliance, automate register management, and streamline audits with our all-in-one compliance platform.",
+      link: "/products/swacomply",
+      imageHint: "compliance dashboard",
+      icon: ShieldCheck
     }
   ];
 

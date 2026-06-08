@@ -54,6 +54,12 @@ export function Navbar() {
                     <span className="text-xs text-muted-foreground">Modern HR Management</span>
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/products/swacomply" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-bold">SwaComply</span>
+                    <span className="text-xs text-muted-foreground">Automated Statutory Compliance</span>
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -111,6 +117,7 @@ export function Navbar() {
             <Link href="/products/tender-intelligence" className="text-lg" onClick={() => setIsOpen(false)}>AI Tender Intelligence</Link>
             <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
             <Link href="/products/mendex-one-hrms" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne HRMS</Link>
+            <Link href="/products/swacomply" className="text-lg" onClick={() => setIsOpen(false)}>SwaComply</Link>
           </div>
           <div className="flex flex-col gap-2 pl-4">
             <span className="text-muted-foreground text-sm uppercase font-bold">Services</span>

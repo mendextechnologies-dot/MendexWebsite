@@ -36,6 +36,12 @@
       "description": "Server room infrastructure and power units",
       "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&h=600&auto=format&fit=crop",
       "imageHint": "server room"
+    },
+    {
+      "id": "swacomply",
+      "description": "Statutory compliance and register management dashboard",
+      "imageUrl": "https://picsum.photos/seed/swacomply/800/600",
+      "imageHint": "compliance dashboard"
     }
   ]
 }
