@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-8">Let's talk about your project.</h1>
               <p className="text-xl text-muted-foreground mb-12">
-                Whether it's a critical power system or a strategic digital platform — our team is ready to support your requirements.
+                Whether it's a critical power system or a custom electrical device — our team is ready to support your requirements.
               </p>
               
               <div className="space-y-8">

@@ -20,17 +20,15 @@ export function Footer() {
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">Solutions</h4>
             <ul className="flex flex-col gap-2">
               <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Critical Power Systems</Link></li>
-              <li><Link href="/products/tender-intelligence" className="text-sm text-muted-foreground hover:text-primary transition-colors">AI Tender Intelligence</Link></li>
-              <li><Link href="/products/mendex-one" className="text-sm text-muted-foreground hover:text-primary transition-colors">MendexOne CRM</Link></li>
-              <li><Link href="/products/mendex-one-hrms" className="text-sm text-muted-foreground hover:text-primary transition-colors">MendexOne HRMS</Link></li>
-              <li><Link href="/products/swacomply" className="text-sm text-muted-foreground hover:text-primary transition-colors">SwaComply</Link></li>
+              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">DC Power Supplies</Link></li>
+              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Industrial Rectifiers</Link></li>
+              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Custom Power Devices</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">Services</h4>
             <ul className="flex flex-col gap-2">
-              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Power Electronics</Link></li>
-              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Digital Services</Link></li>
+              <li><Link href="/services/engineering-supply" className="text-sm text-muted-foreground hover:text-primary transition-colors">Power Electronics Supply</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Custom Quote</Link></li>
             </ul>
           </div>

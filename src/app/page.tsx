@@ -7,95 +7,99 @@ import { Footer } from "@/components/layout/Footer";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { 
   ArrowRight, 
-  Layers, 
   Cpu, 
-  BrainCircuit, 
-  BarChart3, 
-  Globe,
-  Sparkles,
-  ShieldCheck,
-  FileSearch,
-  CheckCircle2,
-  Users,
-  Zap,
+  ShieldCheck, 
+  CheckCircle2, 
+  Zap, 
   Activity,
-  Database
+  Factory,
+  BatteryCharging,
+  Settings,
+  Building2
 } from "lucide-react";
 
 export default function Home() {
   const products = [
     {
-      id: "critical-power",
-      title: "Critical Power Solutions",
-      description: "Custom-built DC power systems, industrial rectifiers, and specialized electrical devices engineered for precision and reliability.",
+      id: "dc-power-supplies",
+      title: "DC Power Supplies",
+      description: "Custom-designed industrial & laboratory grade DC systems engineered for process-specific power and precision output.",
       link: "/services/engineering-supply",
       imageHint: "industrial electronics",
       icon: Zap
     },
     {
-      id: "tender-intelligence",
-      title: "AI Tender Intelligence",
-      description: "Analyze complex government tenders in minutes. Reduce compliance errors with AI-powered document intelligence.",
-      link: "/products/tender-intelligence",
-      imageHint: "data analysis",
-      icon: FileSearch
+      id: "industrial-rectifiers",
+      title: "Industrial Rectifiers",
+      description: "High-current and high-voltage power conversion systems designed to perform reliably in demanding industrial environments.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial electronics",
+      icon: Factory
     },
     {
-      id: "mendex-one",
-      title: "MendexOne CRM",
-      description: "Modern CRM platform designed for workflow-driven business management with automation and scalable architecture.",
-      link: "/products/mendex-one",
-      imageHint: "software dashboard",
-      icon: Layers
+      id: "battery-chargers",
+      title: "Battery Chargers",
+      description: "Utility power systems and critical backup chargers using advanced charging algorithms for industrial continuity.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial electronics",
+      icon: BatteryCharging
     },
     {
-      id: "mendex-one-hrms",
-      title: "MendexOne HRMS",
-      description: "Modern human resource management platform designed to simplify employee operations and automate HR workflows.",
-      link: "/products/mendex-one-hrms",
-      imageHint: "hr management",
-      icon: Users
+      id: "pulsed-power-systems",
+      title: "Pulsed Power Systems",
+      description: "High-energy pulse discharge and laboratory power systems designed for advanced research and electrical testing.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial electronics",
+      icon: Activity
     },
     {
-      id: "swacomply",
-      title: "SwaComply",
-      description: "Simplify statutory compliance, automate register management, and streamline audits with our all-in-one compliance platform.",
-      link: "/products/swacomply",
-      imageHint: "compliance dashboard",
+      id: "custom-power-devices",
+      title: "Custom Power Devices",
+      description: "Tailor-made electrical conversion systems designed to meet customer-specific voltage, current, and duty cycle requirements.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial electronics",
+      icon: Settings
+    },
+    {
+      id: "power-components-protection",
+      title: "Components & Protection",
+      description: "Industrial grade power electronics, high-rupture capacity (HRC) fuses, and semiconductor protection products.",
+      link: "/services/engineering-supply",
+      imageHint: "industrial electronics",
       icon: ShieldCheck
     }
   ];
 
   const coreExpertise = [
     { 
-      icon: Layers, 
-      title: "Enterprise Software Development", 
-      desc: "Architecting and building scalable backend systems and high-performance frontend applications." 
+      icon: Settings, 
+      title: "Custom Design & Engineering", 
+      desc: "Tailored power conversion systems matching unique voltage, current, and load profiles." 
     },
     { 
-      icon: Globe, 
-      title: "Cloud & Platform Engineering", 
-      desc: "Infrastructure as Code, Kubernetes orchestration, and multi-cloud strategies for maximum uptime." 
+      icon: Cpu, 
+      title: "Thermal & Cooling Analysis", 
+      desc: "Advanced thermal management designs ensuring operational stability and safety under load." 
     },
     { 
-      icon: BrainCircuit, 
-      title: "AI & Intelligent Systems", 
-      desc: "Implementation of Generative AI, machine learning pipelines, and intelligent automation." 
-    },
-    { 
-      icon: BarChart3, 
-      title: "Digital Strategy", 
-      desc: "Modernizing legacy systems and migrating to cloud-native architectures for enterprise scale." 
+      icon: ShieldCheck, 
+      title: "Industrial Protection Standards", 
+      desc: "Built-in protection schemas including HRC fuses, active semiconductor safeguards, and cooling monitors." 
     },
     { 
       icon: Zap, 
-      title: "Performance Optimization", 
-      desc: "Drastic latency reduction for critical business paths through code-level optimization." 
+      title: "High Current & High Voltage", 
+      desc: "Deep engineering expertise in high current rectifiers and high-energy laboratory pulsed power." 
     },
     { 
-      icon: Database, 
-      title: "Data Engineering", 
-      desc: "Building robust ETL pipelines and real-time streaming architectures for large-scale data." 
+      icon: Activity, 
+      title: "Testing & Validation", 
+      desc: "Rigorous factory testing of all custom electrical assemblies before deployment to ensure reliability." 
+    },
+    { 
+      icon: Building2, 
+      title: "Utility & Industrial Grade", 
+      desc: "Heavy-duty cabinets and enclosures designed to withstand harsh field environments." 
     },
   ];
 
@@ -114,14 +118,14 @@ export default function Home() {
             Engineering <span className="text-primary italic">Critical Infrastructure</span> for Enterprise Scale
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            MENDEX Technologies builds specialized power systems and AI-driven ecosystems designed to transform industrial operations.
+            MENDEX Technologies builds specialized power systems and custom electrical devices designed to power demanding industrial operations.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="h-14 px-8 text-lg font-medium" asChild>
               <Link href="/services/engineering-supply">Power Solutions</Link>
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-medium" asChild>
-              <Link href="/products/tender-intelligence">Intelligence Platforms</Link>
+              <Link href="/contact">Request Quote</Link>
             </Button>
           </div>
         </div>
@@ -130,18 +134,18 @@ export default function Home() {
       {/* Ecosystem Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Engineering & Intelligence Ecosystem</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Critical Power & Electrical Ecosystem</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Specialized solutions built to solve complex organizational challenges at the intersection of power and intelligence.
+            Specialized engineering solutions built to solve complex power requirements.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden border-none shadow-2xl group transition-all hover:-translate-y-2">
-              <div className="relative h-64 w-full">
+              <div className="relative h-64 w-full bg-muted">
                 <Image 
-                  src={PlaceHolderImages.find(img => img.id === product.id)?.imageUrl || ""}
+                  src={PlaceHolderImages.find(img => img.id === product.id)?.imageUrl || PlaceHolderImages.find(img => img.id === "critical-power")?.imageUrl || ""}
                   alt={product.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -174,9 +178,9 @@ export default function Home() {
       <section className="py-24 bg-muted/30 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Digital Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Strategic Engineering Capabilities</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Deep technical capability across the entire stack of modern enterprise computing.
+              Deep technical capability across critical power systems and custom electrical design.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -30,65 +30,7 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
-            
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors focus:outline-none">
-                Products <ChevronDown className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-64">
-                <DropdownMenuItem asChild>
-                  <Link href="/products/tender-intelligence" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">AI Tender Intelligence</span>
-                    <span className="text-xs text-muted-foreground">Analyze Tenders in Minutes</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/products/mendex-one" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">MendexOne CRM</span>
-                    <span className="text-xs text-muted-foreground">Workflow-Driven Sales</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/products/mendex-one-hrms" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">MendexOne HRMS</span>
-                    <span className="text-xs text-muted-foreground">Modern HR Management</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/products/swacomply" className="flex flex-col items-start gap-1 p-3">
-                    <span className="font-bold">SwaComply</span>
-                    <span className="text-xs text-muted-foreground">Automated Statutory Compliance</span>
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors focus:outline-none">
-                Services <ChevronDown className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-80">
-                <DropdownMenuItem asChild>
-                  <Link href="/services" className="flex items-center gap-3 p-3">
-                    <Briefcase className="w-5 h-5 text-primary" />
-                    <div className="flex flex-col">
-                      <span className="font-bold">All Services</span>
-                      <span className="text-xs text-muted-foreground">Our full expertise portfolio</span>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/engineering-supply" className="flex items-center gap-3 p-3">
-                    <Zap className="w-5 h-5 text-primary" />
-                    <div className="flex flex-col">
-                      <span className="font-bold">Engineering & Electrical Supply</span>
-                      <span className="text-xs text-muted-foreground">Project-Driven Component Supply</span>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
+            <Link href="/services" className="text-sm font-medium hover:text-primary transition-colors">Power Solutions</Link>
             <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
             <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
           </div>
@@ -112,18 +54,7 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-background border-b border-border py-4 px-4 flex flex-col gap-4">
           <Link href="/" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Home</Link>
-          <div className="flex flex-col gap-2 pl-4">
-            <span className="text-muted-foreground text-sm uppercase font-bold">Products</span>
-            <Link href="/products/tender-intelligence" className="text-lg" onClick={() => setIsOpen(false)}>AI Tender Intelligence</Link>
-            <Link href="/products/mendex-one" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne CRM</Link>
-            <Link href="/products/mendex-one-hrms" className="text-lg" onClick={() => setIsOpen(false)}>MendexOne HRMS</Link>
-            <Link href="/products/swacomply" className="text-lg" onClick={() => setIsOpen(false)}>SwaComply</Link>
-          </div>
-          <div className="flex flex-col gap-2 pl-4">
-            <span className="text-muted-foreground text-sm uppercase font-bold">Services</span>
-            <Link href="/services" className="text-lg" onClick={() => setIsOpen(false)}>Overview</Link>
-            <Link href="/services/engineering-supply" className="text-lg" onClick={() => setIsOpen(false)}>Engineering Supply</Link>
-          </div>
+          <Link href="/services" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Power Solutions</Link>
           <Link href="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
           <hr className="border-border" />

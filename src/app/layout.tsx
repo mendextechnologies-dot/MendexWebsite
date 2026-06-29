@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Mendex Platform | Engineering Enterprise Software',
-  description: 'Mendex builds enterprise applications, AI-driven platforms, and scalable digital ecosystems.',
+  title: 'Mendex Technologies | Critical Power & Electrical Systems',
+  description: 'Mendex Technologies designs, manufactures, and supplies critical power systems, industrial rectifiers, and custom electrical solutions.',
 };
 
 export default function RootLayout({

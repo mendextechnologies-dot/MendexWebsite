@@ -1,46 +1,49 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { 
-  Layers, 
-  Globe, 
-  BrainCircuit, 
-  BarChart3, 
   Zap, 
-  Database 
+  Factory, 
+  BatteryCharging, 
+  Activity, 
+  Settings, 
+  ShieldCheck,
+  ArrowRight
 } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
     { 
-      icon: Layers, 
-      title: "Enterprise Software Development", 
-      desc: "Architecting and building scalable backend systems and high-performance frontend applications using modern technology stacks." 
-    },
-    { 
-      icon: Globe, 
-      title: "Cloud & Platform Engineering", 
-      desc: "Infrastructure as Code, Kubernetes orchestration, and multi-cloud strategies designed for maximum uptime and developer productivity." 
-    },
-    { 
-      icon: BrainCircuit, 
-      title: "AI & Intelligent Systems", 
-      desc: "Implementation of Generative AI, machine learning pipelines, and intelligent automation to solve complex business problems." 
-    },
-    { 
-      icon: BarChart3, 
-      title: "Digital Transformation", 
-      desc: "Comprehensive roadmap design for companies looking to modernize their legacy systems and migrate to cloud-native architectures." 
-    },
-    { 
       icon: Zap, 
-      title: "Performance Optimization", 
-      desc: "Drastic latency reduction for critical business paths through code-level optimization and caching strategy redesign." 
+      title: "DC Power Supplies", 
+      desc: "Custom-designed DC systems for industrial, laboratory, and process-specific power requirements." 
     },
     { 
-      icon: Database, 
-      title: "Data Engineering", 
-      desc: "Building robust ETL pipelines, data warehouses, and real-time streaming architectures for large-scale enterprise data." 
+      icon: Factory, 
+      title: "Industrial Rectifiers", 
+      desc: "High-current and high-voltage power conversion systems designed for demanding environments." 
+    },
+    { 
+      icon: BatteryCharging, 
+      title: "Battery Chargers", 
+      desc: "Industrial backup battery chargers and utility power systems ensuring critical backup supply." 
+    },
+    { 
+      icon: Activity, 
+      title: "Pulsed Power Systems", 
+      desc: "High-energy pulse discharge and laboratory power systems designed for testing and research." 
+    },
+    { 
+      icon: Settings, 
+      title: "Custom Power Devices", 
+      desc: "Tailor-made electrical conversion systems matching unique specifications and duty cycles." 
+    },
+    { 
+      icon: ShieldCheck, 
+      title: "Components & Protection", 
+      desc: "Power electronics, high-rupture capacity (HRC) fuses, active safeguards, and protection products." 
     },
   ];
 
@@ -50,9 +53,9 @@ export default function ServicesPage() {
       
       <section className="pt-32 pb-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-8">Our Core Expertise</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-8">Critical Power & Engineering Services</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Deep technical capability across the entire stack of modern enterprise computing.
+            Providing custom electrical engineering, specialized manufacturing, and technical supply services.
           </p>
         </div>
       </section>
@@ -66,7 +69,12 @@ export default function ServicesPage() {
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{service.desc}</p>
+                <Button variant="link" className="p-0 h-auto text-primary text-sm group-hover:gap-2 transition-all font-semibold" asChild>
+                  <Link href="/services/engineering-supply" className="flex items-center gap-1">
+                    View Specifications <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           ))}
