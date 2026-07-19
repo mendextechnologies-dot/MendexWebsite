@@ -81,17 +81,17 @@ export default function ControlAutomationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       
       {/* Page Hero */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-white to-background">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-secondary/50 to-background">
         <div className="max-w-7xl mx-auto">
-          <Button variant="ghost" className="mb-6 font-semibold text-accent gap-2" asChild>
+          <Button variant="ghost" className="mb-6 font-semibold text-accent gap-2 bg-transparent hover:bg-secondary/40 text-slate-700" asChild>
             <Link href="/services"><ArrowLeft className="w-4 h-4" /> Back to Services</Link>
           </Button>
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold mb-6 border border-accent/20">
               <Settings className="w-3.5 h-3.5" /> Service Division
             </div>
             <h1 className="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tight text-slate-900 leading-tight">
@@ -104,25 +104,22 @@ export default function ControlAutomationPage() {
             <p className="text-base text-slate-650 leading-relaxed mb-4">
               Modern industries rely on intelligent control systems to ensure safe operation, consistent process performance, efficient resource utilization, and real-time decision-making. As industrial processes become increasingly automated and interconnected, organizations require control systems that not only manage equipment but also provide visibility, diagnostics, communication, and scalability for future growth.
             </p>
-            <p className="text-base text-slate-655 leading-relaxed">
+            <p className="text-base text-slate-650 leading-relaxed">
               At Mendex Technology Services LLP, we design and integrate Control & Automation Systems that combine electrical engineering, automation, instrumentation, industrial communication, and intelligent monitoring into comprehensive operational solutions. Our systems are engineered to simplify complex processes, improve operational reliability, and support digital transformation across industrial, infrastructure, research, and utility applications.
-            </p>
-            <p className="text-base text-slate-655 leading-relaxed mt-4">
-              From standalone machine control panels to fully integrated plant-wide control systems, we deliver customized solutions designed around your operational requirements, ensuring dependable performance throughout the system lifecycle.
             </p>
           </div>
         </div>
       </section>
 
       {/* Capabilities Overview Section */}
-      <section className="py-24 px-4 bg-white border-y border-border">
+      <section className="py-24 px-4 bg-background border-y border-border">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-extrabold text-slate-900 mb-12 tracking-tight">Comprehensive Control & Automation Solutions</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {capabilities.map((cap, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-border flex flex-col justify-between min-h-[120px]">
+              <div key={idx} className="bg-card p-6 rounded-2xl border border-border flex flex-col justify-between min-h-[120px] shadow-sm">
                 <span className="text-xs font-bold text-accent mb-2">0{idx+1}</span>
-                <span className="font-bold text-slate-800 text-sm leading-snug">{cap}</span>
+                <span className="font-bold text-slate-700 text-sm leading-snug">{cap}</span>
               </div>
             ))}
           </div>
@@ -134,14 +131,14 @@ export default function ControlAutomationPage() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Control Panels */}
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
+            <div className="bg-card p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-3 border-l-4 border-accent pl-3">Industrial Control Panels</h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-6">
                 Control panels serve as the central interface between equipment, operators, and automation systems. We design and integrate panels emphasizing functionality, safety, accessibility, and clean wiring.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {panelCapabilities.map((item, idx) => (
-                  <li key={idx} className="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                  <li key={idx} className="text-xs font-semibold text-slate-655 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                     {item}
                   </li>
@@ -150,14 +147,14 @@ export default function ControlAutomationPage() {
             </div>
 
             {/* Monitoring */}
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
+            <div className="bg-card p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-3 border-l-4 border-accent pl-3">Monitoring & Supervisory Systems</h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-6">
                 Continuous monitoring enables operators to understand system performance, identify abnormalities, and respond quickly to events.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {monitoringFeatures.map((item, idx) => (
-                  <li key={idx} className="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                  <li key={idx} className="text-xs font-semibold text-slate-655 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                     {item}
                   </li>
@@ -166,14 +163,14 @@ export default function ControlAutomationPage() {
             </div>
 
             {/* Communication */}
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
+            <div className="bg-card p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-3 border-l-4 border-accent pl-3">Industrial Communication Systems</h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-6">
                 Reliable communication between equipment, automation systems, and monitoring platforms is essential for modern operations.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {commSystems.map((item, idx) => (
-                  <li key={idx} className="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                  <li key={idx} className="text-xs font-semibold text-slate-655 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                     {item}
                   </li>
@@ -182,14 +179,14 @@ export default function ControlAutomationPage() {
             </div>
 
             {/* Modernization */}
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
+            <div className="bg-card p-8 sm:p-10 rounded-3xl border border-border shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-3 border-l-4 border-accent pl-3">Control System Modernization</h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-6">
                 Upgrading legacy PLC and HMI systems rather than replacing entire machines. Protects previous investments and reduces downtime.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {modernizationServices.map((item, idx) => (
-                  <li key={idx} className="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                  <li key={idx} className="text-xs font-semibold text-slate-655 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                     {item}
                   </li>
@@ -201,7 +198,7 @@ export default function ControlAutomationPage() {
       </section>
 
       {/* Integrated Automation & Control list */}
-      <section className="py-24 px-4 bg-white border-t border-border">
+      <section className="py-24 px-4 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Integrated Automation & Control</h2>
           <p className="text-slate-500 text-base max-w-2xl mx-auto mb-12">
@@ -209,8 +206,8 @@ export default function ControlAutomationPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {integratedComponents.map((comp, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-border text-center">
-                <span className="font-semibold text-slate-800 text-sm">{comp}</span>
+              <div key={idx} className="bg-card p-6 rounded-2xl border border-border text-center shadow-sm">
+                <span className="font-semibold text-slate-700 text-sm">{comp}</span>
               </div>
             ))}
           </div>
@@ -218,13 +215,13 @@ export default function ControlAutomationPage() {
       </section>
 
       {/* Action CTA */}
-      <section className="py-24 px-4 bg-slate-900 text-white text-center">
+      <section className="py-24 px-4 bg-secondary/20 border-t border-border text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">Deploy Connected Operations</h2>
-          <p className="text-lg text-slate-355 mb-10 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight text-slate-900">Deploy Connected Operations</h2>
+          <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
             Design bespoke PLC panels, configure real-time telemetry dashboards, and modernise legacy relay systems.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-white rounded-xl h-14 px-8 font-semibold" asChild>
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-white rounded-xl h-14 px-8 font-semibold shadow-lg" asChild>
             <Link href="/contact">Contact Control Panel Engineers</Link>
           </Button>
         </div>

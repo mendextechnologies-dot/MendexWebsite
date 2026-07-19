@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 222.2 47% 6%; /* Deep dark slate-950 background (#0A0E1A) */
-    --foreground: 210 40% 98%; /* Light slate-50 text */
-    --card: 222.2 47% 10%; /* Dark slate card background (#111827) */
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 47% 6%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%; /* White primary */
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 12%; /* Muted dark secondary */
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 12%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --background: 0 0% 100%; /* Pure White background (#FFFFFF) */
+    --foreground: 222.2 47.4% 11.2%; /* Deep Slate-900 / Navy text (#0F172A) */
+    --card: 0 0% 100%; /* White card background */
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%; /* Deep Slate-900 / Navy primary */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%; /* Slate-100 secondary background (#F1F5F9) */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 174 80% 38%; /* Vibrant Emerald Teal (#0D9488) */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 217.2 32.6% 15%; /* Subtle dark border */
-    --input: 217.2 32.6% 15%;
+    --border: 214.3 31.8% 91.4%; /* Light gray border (#E2E8F0) */
+    --input: 214.3 31.8% 91.4%;
     --ring: 174 80% 38%;
     --radius: 1rem;
   }

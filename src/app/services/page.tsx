@@ -65,19 +65,19 @@ export default function ServicesPage() {
       <Navbar />
       
       {/* Services Hero */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-background to-secondary/30">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-secondary/50 to-background">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tight text-white">
+          <h1 className="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tight text-slate-900">
             Our <span className="text-accent italic font-serif">Expertise</span>
           </h1>
-          <p className="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-6 max-w-3xl mx-auto">
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 max-w-3xl mx-auto">
             Comprehensive Engineering Solutions for Modern Industries
           </p>
-          <div className="max-w-4xl mx-auto text-center bg-card p-8 rounded-[2rem] border border-border shadow-2xl">
-            <p className="text-base text-slate-300 leading-relaxed mb-4">
+          <div className="max-w-4xl mx-auto text-center bg-card p-8 rounded-[2rem] border border-border shadow-xl">
+            <p className="text-base text-slate-600 leading-relaxed mb-4">
               At Mendex Technology Services LLP, our expertise is built on the integration of engineering knowledge, technical innovation, and practical implementation. We provide multidisciplinary engineering solutions that help organizations improve operational efficiency, enhance system reliability, modernize existing infrastructure, and support long-term technological growth.
             </p>
-            <p className="text-base text-slate-200 leading-relaxed font-semibold">
+            <p className="text-base text-slate-800 leading-relaxed font-semibold">
               Our capabilities extend across Power Conversion Solutions, Industrial Automation, Electrical, Electronics & Instrumentation (EE&I) System Integration, Reverse Engineering, Control Systems, Engineering Services, and the supply of critical industrial components. By bringing these disciplines together, we offer customers a single engineering partner capable of supporting projects from concept through commissioning and lifecycle support.
             </p>
           </div>
@@ -88,14 +88,14 @@ export default function ServicesPage() {
       <section className="py-24 px-4 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <Card key={idx} className="border border-border shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-3xl bg-card flex flex-col justify-between">
+            <Card key={idx} className="border border-border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-3xl bg-card flex flex-col justify-between">
               <CardContent className="p-8 sm:p-10 flex flex-col justify-between h-full min-h-[280px]">
                 <div>
                   <div className="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center mb-6 text-accent">
                     <service.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">{service.desc}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-6">{service.desc}</p>
                 </div>
                 <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80 text-sm font-bold gap-2 self-start" asChild>
                   <Link href={service.link} className="flex items-center gap-1">
