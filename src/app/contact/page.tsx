@@ -128,12 +128,12 @@ export default function ContactPage() {
                     <Input id="email" name="email" type="email" placeholder="john@company.com" required className="rounded-xl h-11" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject / Platform Area</Label>
-                    <Input id="subject" name="subject" placeholder="e.g. OPS Marketplace Integration" required className="rounded-xl h-11" />
+                    <Label htmlFor="subject">Subject / Engineering Area</Label>
+                    <Input id="subject" name="subject" placeholder="e.g. PLC Automation, Power Rectifier Sourcing" required className="rounded-xl h-11" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message / Specifications</Label>
-                    <Textarea id="message" name="message" placeholder="Describe your project scope, timeline, platform needs, or compliance schedule..." className="min-h-[150px] rounded-xl" required />
+                    <Textarea id="message" name="message" placeholder="Describe your engineering specifications, required industrial parts, or legacy system details..." className="min-h-[150px] rounded-xl" required />
                   </div>
                   <Button type="submit" className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}

@@ -13,24 +13,24 @@ export function Footer() {
               <span className="text-xl font-bold tracking-tight">MENDEX</span>
             </Link>
             <p className="text-sm text-slate-400 max-w-xs mt-4">
-              Building enterprise-grade workflow platforms, digital marketplace networks, and compliance solutions.
+              Delivering integrated solutions across Power Conversion, Industrial Automation, EE&I System Integration, Reverse Engineering, and critical industrial sourcing.
             </p>
           </div>
           <div>
-            <h4 className="text-xs font-bold mb-4 uppercase tracking-wider text-slate-400">Products</h4>
+            <h4 className="text-xs font-bold mb-4 uppercase tracking-wider text-slate-400">Engineering Solutions</h4>
             <ul className="flex flex-col gap-2">
-              <li><Link href="/products/ops-marketplace" className="text-sm text-slate-300 hover:text-accent transition-colors">OPS Marketplace</Link></li>
-              <li><Link href="/products/mendex-one" className="text-sm text-slate-300 hover:text-accent transition-colors">MendexOne CRM</Link></li>
-              <li><Link href="/products/swacomply" className="text-sm text-slate-300 hover:text-accent transition-colors">SwaComply AI</Link></li>
+              <li><Link href="/services/power-conversion" className="text-sm text-slate-300 hover:text-accent transition-colors">Power Conversion</Link></li>
+              <li><Link href="/services/industrial-automation" className="text-sm text-slate-300 hover:text-accent transition-colors">Industrial Automation</Link></li>
+              <li><Link href="/services/system-integration" className="text-sm text-slate-300 hover:text-accent transition-colors">EE&I System Integration</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xs font-bold mb-4 uppercase tracking-wider text-slate-400">Services</h4>
+            <h4 className="text-xs font-bold mb-4 uppercase tracking-wider text-slate-400">Services & Sourcing</h4>
             <ul className="flex flex-col gap-2">
-              <li><Link href="/services/government-compliance" className="text-sm text-slate-300 hover:text-accent transition-colors">Government Compliance</Link></li>
-              <li><Link href="/services/engineering-supply" className="text-sm text-slate-300 hover:text-accent transition-colors">Engineering & Supply</Link></li>
-              <li><Link href="/services" className="text-sm text-slate-300 hover:text-accent transition-colors">Enterprise Software</Link></li>
-              <li><Link href="/contact" className="text-sm text-slate-300 hover:text-accent transition-colors">Get Consultation</Link></li>
+              <li><Link href="/services/reverse-engineering" className="text-sm text-slate-300 hover:text-accent transition-colors">Reverse Engineering</Link></li>
+              <li><Link href="/services/engineering-support" className="text-sm text-slate-300 hover:text-accent transition-colors">Engineering Services</Link></li>
+              <li><Link href="/services/components-supply" className="text-sm text-slate-300 hover:text-accent transition-colors">Industrial Components</Link></li>
+              <li><Link href="/contact" className="text-sm text-slate-300 hover:text-accent transition-colors">Request Quote</Link></li>
             </ul>
           </div>
           <div>
@@ -43,7 +43,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-400">© {new Date().getFullYear()} MENDEX Technologies. All rights reserved.</p>
+          <p className="text-xs text-slate-400">© {new Date().getFullYear()} Mendex Technology Services LLP. All rights reserved.</p>
           <div className="flex gap-6">
             <span className="text-xs text-slate-400 hover:text-white cursor-pointer transition-colors">LinkedIn</span>
             <span className="text-xs text-slate-400 hover:text-white cursor-pointer transition-colors">Twitter</span>
