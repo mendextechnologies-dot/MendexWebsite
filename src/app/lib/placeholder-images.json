@@ -42,6 +42,12 @@
       "description": "Statutory compliance and register management dashboard",
       "imageUrl": "https://picsum.photos/seed/swacomply/800/600",
       "imageHint": "compliance dashboard"
+    },
+    {
+      "id": "ops-marketplace",
+      "description": "AI-Driven Expert Matching & Service Platform",
+      "imageUrl": "https://picsum.photos/seed/ops-marketplace/800/600",
+      "imageHint": "marketplace dashboard"
     }
   ]
 }
