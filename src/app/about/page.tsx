@@ -8,12 +8,7 @@ import {
   CheckCircle2, 
   Target, 
   Eye, 
-  Sparkles,
-  ShieldCheck, 
   HeartHandshake, 
-  Lightbulb, 
-  Award,
-  Users,
   Compass,
   ArrowRight
 } from "lucide-react";
@@ -69,33 +64,33 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       
       {/* About Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-white to-background">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-background to-secondary/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-bold mb-6 border border-accent/20">
                 <HeartHandshake className="w-3.5 h-3.5" /> About Us
               </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-8 text-slate-900 tracking-tight leading-tight">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-tight">
                 Engineering Innovation. <br />
                 <span className="text-accent italic font-serif">Powering Progress.</span>
               </h1>
-              <p className="text-xl text-slate-800 font-semibold mb-8 leading-relaxed">
+              <p className="text-xl text-slate-200 font-semibold mb-8 leading-relaxed">
                 Engineering Innovation. Powering Progress. Enabling the Future.
               </p>
-              <p className="text-base text-slate-650 leading-relaxed mb-6">
+              <p className="text-base text-slate-450 leading-relaxed mb-6">
                 At Mendex Technology Services LLP, we are committed to delivering intelligent engineering solutions that help industries improve reliability, efficiency, and long-term operational performance. We combine multidisciplinary engineering expertise with practical industrial experience to develop solutions that address today's challenges while preparing organizations for tomorrow's opportunities.
               </p>
-              <p className="text-base text-slate-650 leading-relaxed">
+              <p className="text-base text-slate-450 leading-relaxed">
                 Our capabilities span Power Conversion Solutions, Industrial Automation, Electrical, Electronics & Instrumentation (EE&I) System Integration, Control & Automation Systems, Reverse Engineering, Product Development, Engineering Services, and the supply of critical industrial and scientific components.
               </p>
             </div>
             
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-card">
               <Image 
                 src={PlaceHolderImages.find(img => img.id === "enterprise-team")?.imageUrl || ""}
                 alt="Mendex Team"
@@ -109,17 +104,17 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are & Mission / Vision */}
-      <section className="py-24 px-4 bg-white border-y border-border">
+      <section className="py-24 px-4 bg-background border-y border-border">
         <div className="max-w-7xl mx-auto space-y-24">
           
           {/* Who We Are */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <h2 className="lg:col-span-4 text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">Who We Are</h2>
+            <h2 className="lg:col-span-4 text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Who We Are</h2>
             <div className="lg:col-span-8">
-              <p className="text-base sm:text-lg text-slate-650 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
                 Mendex Technology Services LLP is an engineering and technology company dedicated to providing integrated solutions across multiple engineering disciplines. Our approach combines technical expertise, innovation, and a strong understanding of industrial applications to deliver solutions that are practical, scalable, and aligned with customer requirements.
               </p>
-              <p className="text-base sm:text-lg text-slate-650 leading-relaxed mt-4">
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed mt-4">
                 We believe engineering extends beyond the design of products. It is about understanding operational challenges, applying the right technologies, and delivering systems that create measurable value throughout their lifecycle. By bringing together expertise in electrical engineering, electronics, instrumentation, automation, embedded systems, and power electronics, we help customers simplify complex projects through a single engineering partner.
               </p>
             </div>
@@ -130,19 +125,19 @@ export default function AboutPage() {
           {/* Mission & Vision */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col justify-between">
+            <div className="bg-card p-10 rounded-[2.5rem] border border-border flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent/15 text-accent rounded-2xl flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                <p className="text-sm text-slate-400 leading-relaxed mb-8">
                   To design, develop, integrate, and support high-quality engineering solutions that enhance operational efficiency, improve system reliability, and create long-term value for our customers through innovation, technical excellence, and responsible engineering practices.
                 </p>
               </div>
               <ul className="space-y-3 pl-2">
                 {missionItems.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-xs font-semibold text-slate-700">
+                  <li key={idx} className="flex items-center gap-3 text-xs font-semibold text-slate-300">
                     <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
                     {item}
                   </li>
@@ -151,18 +146,18 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col justify-between">
+            <div className="bg-card p-10 rounded-[2.5rem] border border-border flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-accent/15 text-accent rounded-2xl flex items-center justify-center mb-6">
                   <Eye className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+                <p className="text-sm text-slate-400 leading-relaxed mb-8">
                   To become a recognized engineering and technology company known for delivering innovative, reliable, and future-ready solutions that contribute to industrial progress, technological advancement, and sustainable development.
                 </p>
               </div>
-              <div className="p-6 bg-white border border-border rounded-2xl mt-4">
-                <p className="text-xs text-slate-500 leading-relaxed">
+              <div className="p-6 bg-background border border-border rounded-2xl mt-4">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   We aspire to build lasting partnerships by combining engineering excellence with practical implementation and customer-focused innovation.
                 </p>
               </div>
@@ -176,21 +171,21 @@ export default function AboutPage() {
       <section className="py-24 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-bold mb-4 border border-accent/20">
               <Compass className="w-3.5 h-3.5" /> Core Principles
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Our Engineering Philosophy</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Our Engineering Philosophy</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
               Engineering is at the core of everything we do. Every project begins with understanding the customer's operational objectives, technical requirements, and long-term expectations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {philosophy.map((item, idx) => (
-              <div key={idx} className="bg-white p-8 sm:p-10 rounded-[2rem] border border-border shadow-sm flex flex-col gap-4">
+              <div key={idx} className="bg-card p-8 sm:p-10 rounded-[2rem] border border-border shadow-sm flex flex-col gap-4">
                 <span className="text-xs font-bold text-accent uppercase tracking-widest">Principle 0{idx + 1}</span>
-                <h4 className="font-extrabold text-slate-900 text-xl">{item.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                <h4 className="font-extrabold text-white text-xl">{item.title}</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -198,20 +193,20 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 px-4 bg-white border-t border-border">
+      <section className="py-24 px-4 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Core Values</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Core Values</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
               Our values define the way we work and guide every engineering decision we make.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((val, idx) => (
-              <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col gap-3">
-                <h4 className="font-bold text-slate-900 text-lg">{val.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{val.desc}</p>
+              <div key={idx} className="bg-card p-8 rounded-3xl border border-border flex flex-col gap-3">
+                <h4 className="font-bold text-white text-lg">{val.title}</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">{val.desc}</p>
               </div>
             ))}
           </div>
@@ -222,16 +217,16 @@ export default function AboutPage() {
       <section className="py-24 px-4 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Industries We Serve</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-4">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Industries We Serve</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-4">
               By understanding the unique challenges of each industry, we develop solutions tailored to specific operational, technical, and regulatory requirements.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {industries.map((ind, idx) => (
-              <div key={idx} className="bg-white p-4 rounded-2xl border border-border text-center hover:bg-slate-50 hover:border-slate-350 transition-colors flex items-center justify-center min-h-[4rem]">
-                <span className="font-semibold text-slate-800 text-sm">{ind}</span>
+              <div key={idx} className="bg-card p-4 rounded-2xl border border-border text-center hover:bg-secondary/40 hover:border-accent transition-colors flex items-center justify-center min-h-[4rem]">
+                <span className="font-semibold text-slate-200 text-sm">{ind}</span>
               </div>
             ))}
           </div>
@@ -239,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-24 px-4 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-24 px-4 bg-card border-t border-border text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-slate-800 opacity-20 -z-10" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight tracking-tight">
@@ -252,7 +247,7 @@ export default function AboutPage() {
             <Button size="lg" className="h-14 px-10 text-base font-semibold bg-accent hover:bg-accent/90 text-white rounded-xl gap-2 shadow-lg" asChild>
               <Link href="/contact">Request Consultation <ArrowRight className="w-4 h-4" /></Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-10 text-base font-semibold border-2 border-slate-700 hover:bg-slate-800 text-white rounded-xl" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-10 text-base font-semibold border-2 border-border bg-transparent hover:bg-secondary/40 text-slate-200 rounded-xl" asChild>
               <Link href="/services">Our Solutions</Link>
             </Button>
           </div>

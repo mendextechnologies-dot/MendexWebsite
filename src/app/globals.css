@@ -4,47 +4,26 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%; /* Clean slate-50 background */
-    --foreground: 222.2 47.4% 11.2%; /* Deep slate-900 text */
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 222.2 47.4% 11.2%; /* Slate-900 primary brand color */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%; /* Slate-100 secondary */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --background: 222.2 47% 6%; /* Deep dark slate-950 background (#0A0E1A) */
+    --foreground: 210 40% 98%; /* Light slate-50 text */
+    --card: 222.2 47% 10%; /* Dark slate card background (#111827) */
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%; /* White primary */
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 12%; /* Muted dark secondary */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
     --accent: 174 80% 38%; /* Vibrant Emerald Teal (#0D9488) */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214.3 31.8% 91.4%; /* Slate-200 clean border */
-    --input: 214.3 31.8% 91.4%;
+    --border: 217.2 32.6% 15%; /* Subtle dark border */
+    --input: 217.2 32.6% 15%;
     --ring: 174 80% 38%;
-    --radius: 0.75rem;
-  }
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 174 80% 38%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 174 80% 38%;
+    --radius: 1rem;
   }
 }
 
