@@ -14,7 +14,10 @@ import {
   Truck,
   Wrench,
   Layers,
-  Lightbulb
+  Lightbulb,
+  Radio,
+  Sliders,
+  ShieldCheck
 } from "lucide-react";
 
 export default function Home() {
@@ -110,53 +113,145 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground relative">
+      {/* SwaComply Background Glowing Orbs */}
+      <div className="absolute inset-x-0 top-0 h-[40rem] bg-[radial-gradient(circle_at_12%_20%,rgba(13,148,136,0.08),transparent_35%),radial-gradient(circle_at_88%_22%,rgba(37,99,235,0.06),transparent_30%)] -z-10 pointer-events-none" />
+      
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-36 pb-24 px-4 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-slate-900/[0.02] -z-10" />
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-xs font-bold mb-8 border border-accent/20">
-            <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-            Mendex Technology Services LLP
-          </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-8 max-w-5xl mx-auto leading-tight tracking-tight text-slate-900">
-            Engineering Tomorrow's <br />
-            <span className="text-accent italic font-serif">Technology Today</span>
-          </h1>
-          <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 max-w-3xl mx-auto">
-            Power Conversion &bull; Industrial Automation &bull; System Integration &bull; Reverse Engineering &bull; Industrial Supply
-          </p>
-          <p className="text-base sm:text-lg text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Innovative engineering solutions that power industries, modernize infrastructure, and enable technological advancement.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 text-base font-semibold bg-accent hover:bg-accent/90 text-white rounded-xl shadow-lg transition-transform hover:-translate-y-0.5" asChild>
-              <Link href="/contact">Request a Quote</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-base font-semibold border border-border bg-white hover:bg-secondary/40 text-slate-800 rounded-xl transition-transform hover:-translate-y-0.5" asChild>
-              <Link href="/services">Explore Our Solutions</Link>
-            </Button>
-          </div>
+      <section className="pt-36 pb-20 px-4 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+            
+            {/* Left Column: Copy & Actions */}
+            <div className="space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50/70 px-4 py-2 text-sm font-medium text-teal-700">
+                <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+                AI-first industrial engineering operations
+              </div>
+              
+              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.05] max-w-2xl">
+                Engineering Tomorrow's <br />
+                <span className="block bg-gradient-to-r from-slate-950 via-slate-800 to-slate-500 bg-clip-text text-transparent italic font-serif">
+                  Technology Today
+                </span>
+              </h1>
+              
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-500">
+                Power Conversion &bull; Industrial Automation &bull; System Integration &bull; Reverse Engineering
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed text-slate-655 max-w-xl">
+                Mendex Technology Services LLP delivers integrated engineering solutions across Power Conversion, Industrial Automation, EE&I System Integration, Control Systems, and Reverse Engineering.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button size="lg" className="h-11 py-2 rounded-full bg-slate-950 px-8 text-white hover:bg-slate-800 font-semibold shadow hover:shadow-lg transition-all duration-200" asChild>
+                  <Link href="/contact" className="flex items-center gap-2">
+                    Request a Quote <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" className="h-11 rounded-full border border-slate-300 bg-white/80 px-8 text-slate-800 hover:bg-slate-100 font-semibold shadow-sm transition-all duration-200" asChild>
+                  <Link href="/services">Explore Our Solutions</Link>
+                </Button>
+              </div>
 
-          <div className="mt-16 max-w-4xl mx-auto text-left bg-card p-8 sm:p-10 rounded-[2rem] border border-border shadow-xl">
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
-              Mendex Technology Services LLP is an engineering and technology company delivering integrated solutions across Power Conversion, Industrial Automation, Electrical, Electronics & Instrumentation (EE&I) System Integration, Control Systems, Reverse Engineering, Product Development, and the supply of critical industrial components.
-            </p>
-            <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-semibold border-l-4 border-accent pl-4">
-              We work with industries, research organizations, government institutions, infrastructure projects, and manufacturing facilities to solve complex engineering challenges through innovation, technical expertise, and reliable execution.
-            </p>
+              {/* Stats badges */}
+              <div className="flex flex-wrap gap-2.5 pt-4">
+                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">Customized</span><span className="ml-1.5 text-slate-500">engineering designs</span></div>
+                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">100%</span><span className="ml-1.5 text-slate-500">validation and testing</span></div>
+                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">7+</span><span className="ml-1.5 text-slate-500">divisions live</span></div>
+              </div>
+            </div>
+
+            {/* Right Column: High-Tech Telemetry Dashboard Mockup */}
+            <div className="relative">
+              <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-teal-500/10 blur-3xl" />
+              <div className="absolute -right-12 bottom-8 h-44 w-44 rounded-full bg-blue-500/10 blur-3xl" />
+              
+              <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
+                <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/80 px-5 py-4 backdrop-blur">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-accent animate-pulse" />
+                    <div>
+                      <div className="text-xs font-bold text-white uppercase tracking-wider">Mendex Operations Control Center</div>
+                      <div className="text-[10px] text-slate-400">Live Project Telemetry & Verification</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <span className="text-[10px] font-mono text-emerald-400">ONLINE</span>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                      <Sliders className="w-4 h-4 text-accent" /> Active Client Integrations
+                    </h3>
+                    <span className="text-[9px] text-slate-400 font-mono">Uptime: 99.98%</span>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
+                      <div className="text-[10px] text-slate-500">Live Systems</div>
+                      <div className="mt-1 text-lg font-bold text-white">12 Projects</div>
+                    </div>
+                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
+                      <div className="text-[10px] text-slate-500">Safety Rating</div>
+                      <div className="mt-1 text-lg font-bold text-accent">Class-I</div>
+                    </div>
+                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
+                      <div className="text-[10px] text-slate-500">Audit Status</div>
+                      <div className="mt-1 text-lg font-bold text-emerald-400">Approved</div>
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 space-y-3">
+                    <div className="text-[10px] font-bold text-slate-450 uppercase tracking-widest flex items-center gap-1.5">
+                      <Radio className="w-3.5 h-3.5 text-accent animate-pulse" /> Telemetry Stream
+                    </div>
+                    <div className="space-y-2">
+                      {/* BARC */}
+                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
+                        <span className="font-semibold text-white">BARC Nuclear Lab</span>
+                        <span className="text-[10px] text-slate-450">PLC Automation</span>
+                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-emerald-500/20 bg-emerald-500/10 text-emerald-400">VERIFIED</div>
+                      </div>
+                      {/* IPR */}
+                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
+                        <span className="font-semibold text-white">IPR Plasma Physics</span>
+                        <span className="text-[10px] text-slate-450">Power Conversion</span>
+                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-blue-500/20 bg-blue-500/10 text-blue-400">ACTIVE</div>
+                      </div>
+                      {/* SAIL */}
+                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
+                        <span className="font-semibold text-white">SAIL Steel Plant</span>
+                        <span className="text-[10px] text-slate-450">EE&I System Integration</span>
+                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-accent/20 bg-accent/10 text-accent">ON-SITE</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Foot bar of the mockup */}
+                <div className="bg-slate-950 px-5 py-3 border-t border-slate-800/80 flex justify-between items-center text-[10px] text-slate-500 font-mono">
+                  <span>MNDX-SYS-ADVISORY</span>
+                  <span>v2026.07.20</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Customer Trust Section */}
-      <section className="py-8 bg-secondary/30 border-y border-border px-4">
+      <section className="py-8 bg-white/60 border-y border-slate-200 px-4 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-center">
-          <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Trusted by leading organizations:</span>
-          <div className="flex flex-wrap items-center justify-center gap-12 text-slate-500 font-extrabold text-xl sm:text-2xl tracking-wider">
+          <span className="text-xs font-bold text-slate-450 uppercase tracking-widest">Trusted by leading organizations:</span>
+          <div className="flex flex-wrap items-center justify-center gap-12 text-slate-400 font-extrabold text-xl sm:text-2xl tracking-wider">
             <span className="hover:text-accent transition-colors">IPR</span>
             <span className="hover:text-accent transition-colors">BARC</span>
             <span className="hover:text-accent transition-colors">SAIL</span>
@@ -165,7 +260,7 @@ export default function Home() {
       </section>
 
       {/* About Mendex Section */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 px-4 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5">
@@ -173,7 +268,7 @@ export default function Home() {
                 Engineering Solutions That Create Lasting Value
               </h2>
               <div className="h-1 w-20 bg-accent mb-8" />
-              <p className="text-lg sm:text-xl font-bold text-slate-850 mb-6">
+              <p className="text-lg sm:text-xl font-bold text-slate-800 mb-6">
                 At Mendex, we believe engineering is about solving problems—not simply supplying products.
               </p>
             </div>
@@ -190,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* Our Expertise */}
-      <section className="py-24 px-4 bg-secondary/20 border-t border-border">
+      <section className="py-24 px-4 bg-white/60 border-t border-slate-200 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Comprehensive Engineering Solutions</h2>
@@ -201,10 +296,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map((exp, idx) => (
-              <Card key={idx} className="border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-[2rem] bg-card group flex flex-col justify-between">
+              <Card key={idx} className="border border-slate-200/85 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-[2rem] bg-white/80 backdrop-blur-sm group flex flex-col justify-between">
                 <CardContent className="p-8 sm:p-10 flex flex-col justify-between h-full">
                   <div>
-                    <div className="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-colors">
                       <exp.icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{exp.title}</h3>
@@ -223,7 +318,7 @@ export default function Home() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-24 px-4 bg-background border-t border-border">
+      <section className="py-24 px-4 bg-transparent border-t border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Industries We Serve</h2>
@@ -234,7 +329,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {industries.map((ind, idx) => (
-              <div key={idx} className="bg-card p-4 rounded-2xl border border-border text-center hover:bg-secondary/40 hover:border-accent transition-colors flex items-center justify-center min-h-[4rem]">
+              <div key={idx} className="bg-white/80 p-4 rounded-2xl border border-slate-200 text-center hover:bg-slate-50 hover:border-accent transition-colors flex items-center justify-center min-h-[4rem] shadow-sm backdrop-blur-sm">
                 <span className="font-semibold text-slate-700 text-sm">{ind}</span>
               </div>
             ))}
@@ -243,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* Why Mendex */}
-      <section className="py-24 px-4 bg-secondary/10 border-t border-border">
+      <section className="py-24 px-4 bg-white/60 border-t border-slate-200 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Engineering Excellence That Delivers Results</h2>
@@ -254,9 +349,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, idx) => (
-              <div key={idx} className="bg-card p-8 rounded-[2rem] border border-border shadow-sm flex flex-col gap-4">
+              <div key={idx} className="bg-white/80 backdrop-blur-sm p-8 rounded-[2rem] border border-slate-200/80 shadow-sm flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-accent/15 text-accent flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <h4 className="font-bold text-slate-900 text-lg">{item.title}</h4>
@@ -269,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 px-4 bg-background border-t border-border">
+      <section className="py-24 px-4 bg-transparent border-t border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Our Engineering Process</h2>
@@ -280,13 +375,13 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto relative">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center p-6 bg-card rounded-2xl border border-border shadow-sm relative group hover:bg-secondary/40 transition-colors">
+              <div key={idx} className="flex flex-col items-center text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm relative group hover:bg-slate-50 transition-colors">
                 <span className="text-xs font-bold text-accent uppercase tracking-widest mb-2">Step 0{idx + 1}</span>
                 <h4 className="font-bold text-slate-900 text-base mb-1">{step.name}</h4>
                 <p className="text-xs text-slate-500">{step.desc}</p>
                 
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-border z-10" />
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-slate-200 z-10" />
                 )}
               </div>
             ))}
@@ -295,8 +390,8 @@ export default function Home() {
       </section>
 
       {/* Research & Innovation */}
-      <section className="py-24 px-4 bg-secondary/15 border-t border-border">
-        <div className="max-w-5xl mx-auto bg-card border border-border p-10 sm:p-16 rounded-[3rem] shadow-xl relative overflow-hidden">
+      <section className="py-24 px-4 bg-white/60 border-t border-slate-200 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto bg-white/85 border border-slate-200/90 p-10 sm:p-16 rounded-[3rem] shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 text-accent/5">
             <Lightbulb className="w-48 h-48" />
           </div>
@@ -316,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Trusted Engineering Partner */}
-      <section className="py-20 bg-secondary/10 border-t border-border text-center px-4">
+      <section className="py-20 bg-transparent border-t border-slate-200 text-center px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight text-slate-900">Trusted Engineering Partner</h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
@@ -326,17 +421,19 @@ export default function Home() {
       </section>
 
       {/* Let's Build the Future Together */}
-      <section className="py-24 px-4 bg-accent text-white">
+      <section className="py-24 px-4 bg-slate-950 text-white border-t border-slate-850">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 tracking-tight">Let's Build the Future Together</h2>
-          <p className="text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed">
             Partner with Mendex Technology Services LLP to develop reliable, efficient, and future-ready engineering solutions for your next project.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button size="lg" className="h-14 px-10 text-base font-semibold bg-slate-900 hover:bg-slate-850 text-white rounded-xl shadow-lg" asChild>
-              <Link href="/contact">Request a Consultation</Link>
+            <Button size="lg" className="h-11 py-2 rounded-full bg-accent hover:bg-accent/90 text-white px-8 font-semibold shadow hover:shadow-lg transition-all duration-200" asChild>
+              <Link href="/contact" className="flex items-center gap-2">
+                Request a Consultation <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-10 text-base font-semibold border-2 border-white bg-transparent hover:bg-white/10 text-white rounded-xl" asChild>
+            <Button size="lg" variant="outline" className="h-11 rounded-full border-2 border-white bg-transparent hover:bg-white/10 text-white px-8 font-semibold" asChild>
               <Link href="/contact">Contact Our Team</Link>
             </Button>
           </div>

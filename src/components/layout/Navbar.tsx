@@ -15,7 +15,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -93,7 +93,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button size="sm" className="bg-accent hover:bg-accent/90 text-white rounded-lg px-4" asChild>
+            <Button size="sm" className="bg-slate-950 hover:bg-slate-800 text-white rounded-full px-6 text-xs h-9 transition-all duration-200" asChild>
               <Link href="/contact">Request Quote</Link>
             </Button>
           </div>
