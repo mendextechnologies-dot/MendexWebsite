@@ -121,128 +121,43 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="pt-36 pb-20 px-4 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-            
-            {/* Left Column: Copy & Actions */}
-            <div className="space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50/70 px-4 py-2 text-sm font-medium text-teal-700">
-                <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                AI-first industrial engineering operations
-              </div>
-              
-              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.05] max-w-2xl">
-                Engineering Tomorrow's <br />
-                <span className="block bg-gradient-to-r from-slate-950 via-slate-800 to-slate-500 bg-clip-text text-transparent italic font-serif">
-                  Technology Today
-                </span>
-              </h1>
-              
-              <p className="text-sm font-bold uppercase tracking-widest text-slate-500">
-                Power Conversion &bull; Industrial Automation &bull; System Integration &bull; Reverse Engineering
-              </p>
-              
-              <p className="text-base sm:text-lg leading-relaxed text-slate-655 max-w-xl">
-                Mendex Technology Services LLP delivers integrated engineering solutions across Power Conversion, Industrial Automation, EE&I System Integration, Control Systems, and Reverse Engineering.
-              </p>
-              
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button size="lg" className="h-11 py-2 rounded-full bg-slate-950 px-8 text-white hover:bg-slate-800 font-semibold shadow hover:shadow-lg transition-all duration-200" asChild>
-                  <Link href="/contact" className="flex items-center gap-2">
-                    Request a Quote <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" className="h-11 rounded-full border border-slate-300 bg-white/80 px-8 text-slate-800 hover:bg-slate-100 font-semibold shadow-sm transition-all duration-200" asChild>
-                  <Link href="/services">Explore Our Solutions</Link>
-                </Button>
-              </div>
+        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50/70 px-4 py-2 text-sm font-medium text-teal-700">
+            <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            AI-first industrial engineering operations
+          </div>
+          
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-950 leading-[1.05] mx-auto">
+            Engineering Tomorrow's <br />
+            <span className="block bg-gradient-to-r from-slate-950 via-slate-800 to-slate-500 bg-clip-text text-transparent italic font-serif">
+              Technology Today
+            </span>
+          </h1>
+          
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500">
+            Power Conversion &bull; Industrial Automation &bull; System Integration &bull; Reverse Engineering
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed text-slate-655 max-w-2xl mx-auto">
+            Mendex Technology Services LLP delivers integrated engineering solutions across Power Conversion, Industrial Automation, EE&I System Integration, Control Systems, and Reverse Engineering.
+          </p>
+          
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <Button size="lg" className="h-11 py-2 rounded-full bg-slate-950 px-8 text-white hover:bg-slate-800 font-semibold shadow hover:shadow-lg transition-all duration-200" asChild>
+              <Link href="/contact" className="flex items-center gap-2">
+                Request a Quote <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button size="lg" className="h-11 rounded-full border border-slate-300 bg-white/80 px-8 text-slate-800 hover:bg-slate-100 font-semibold shadow-sm transition-all duration-200" asChild>
+              <Link href="/services">Explore Our Solutions</Link>
+            </Button>
+          </div>
 
-              {/* Stats badges */}
-              <div className="flex flex-wrap gap-2.5 pt-4">
-                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">Customized</span><span className="ml-1.5 text-slate-500">engineering designs</span></div>
-                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">100%</span><span className="ml-1.5 text-slate-500">validation and testing</span></div>
-                <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">7+</span><span className="ml-1.5 text-slate-500">divisions live</span></div>
-              </div>
-            </div>
-
-            {/* Right Column: High-Tech Telemetry Dashboard Mockup */}
-            <div className="relative">
-              <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-teal-500/10 blur-3xl" />
-              <div className="absolute -right-12 bottom-8 h-44 w-44 rounded-full bg-blue-500/10 blur-3xl" />
-              
-              <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 text-slate-100 shadow-2xl">
-                <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/80 px-5 py-4 backdrop-blur">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-accent animate-pulse" />
-                    <div>
-                      <div className="text-xs font-bold text-white uppercase tracking-wider">Mendex Operations Control Center</div>
-                      <div className="text-[10px] text-slate-400">Live Project Telemetry & Verification</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    <span className="text-[10px] font-mono text-emerald-400">ONLINE</span>
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                      <Sliders className="w-4 h-4 text-accent" /> Active Client Integrations
-                    </h3>
-                    <span className="text-[9px] text-slate-400 font-mono">Uptime: 99.98%</span>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
-                      <div className="text-[10px] text-slate-500">Live Systems</div>
-                      <div className="mt-1 text-lg font-bold text-white">12 Projects</div>
-                    </div>
-                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
-                      <div className="text-[10px] text-slate-500">Safety Rating</div>
-                      <div className="mt-1 text-lg font-bold text-accent">Class-I</div>
-                    </div>
-                    <div className="rounded-xl border border-slate-850 bg-slate-900/60 p-3">
-                      <div className="text-[10px] text-slate-500">Audit Status</div>
-                      <div className="mt-1 text-lg font-bold text-emerald-400">Approved</div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 space-y-3">
-                    <div className="text-[10px] font-bold text-slate-450 uppercase tracking-widest flex items-center gap-1.5">
-                      <Radio className="w-3.5 h-3.5 text-accent animate-pulse" /> Telemetry Stream
-                    </div>
-                    <div className="space-y-2">
-                      {/* BARC */}
-                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
-                        <span className="font-semibold text-white">BARC Nuclear Lab</span>
-                        <span className="text-[10px] text-slate-450">PLC Automation</span>
-                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-emerald-500/20 bg-emerald-500/10 text-emerald-400">VERIFIED</div>
-                      </div>
-                      {/* IPR */}
-                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
-                        <span className="font-semibold text-white">IPR Plasma Physics</span>
-                        <span className="text-[10px] text-slate-450">Power Conversion</span>
-                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-blue-500/20 bg-blue-500/10 text-blue-400">ACTIVE</div>
-                      </div>
-                      {/* SAIL */}
-                      <div className="flex items-center justify-between rounded-lg bg-slate-900 px-3 py-2.5 text-xs border border-slate-850">
-                        <span className="font-semibold text-white">SAIL Steel Plant</span>
-                        <span className="text-[10px] text-slate-450">EE&I System Integration</span>
-                        <div className="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-bold border-accent/20 bg-accent/10 text-accent">ON-SITE</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Foot bar of the mockup */}
-                <div className="bg-slate-950 px-5 py-3 border-t border-slate-800/80 flex justify-between items-center text-[10px] text-slate-500 font-mono">
-                  <span>MNDX-SYS-ADVISORY</span>
-                  <span>v2026.07.20</span>
-                </div>
-              </div>
-            </div>
-
+          {/* Stats badges */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 pt-4">
+            <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">Customized</span><span className="ml-1.5 text-slate-500">engineering designs</span></div>
+            <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">100%</span><span className="ml-1.5 text-slate-500">validation and testing</span></div>
+            <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 text-xs shadow-sm backdrop-blur-sm"><span className="font-semibold text-slate-900">7+</span><span className="ml-1.5 text-slate-500">divisions live</span></div>
           </div>
         </div>
       </section>
