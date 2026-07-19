@@ -10,7 +10,8 @@ import {
   RefreshCw, 
   Wrench, 
   Truck,
-  ArrowRight
+  ArrowRight,
+  Settings
 } from "lucide-react";
 
 export default function ServicesPage() {
@@ -26,6 +27,12 @@ export default function ServicesPage() {
       title: "Industrial Automation & Control", 
       desc: "PLC programming, SCADA, HMI, Industrial IoT (IIoT), motion control, remote diagnostics, process and machine automation.",
       link: "/services/industrial-automation"
+    },
+    { 
+      icon: Settings, 
+      title: "Control & Automation Systems", 
+      desc: "Design and integration of Control panels, real-time diagnostics, industrial communications, and legacy controller modernizations.",
+      link: "/services/control-automation"
     },
     { 
       icon: Layers, 

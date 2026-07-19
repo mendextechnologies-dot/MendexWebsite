@@ -56,6 +56,12 @@ export function Navbar() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="rounded-lg cursor-pointer hover:bg-muted/50 p-2">
+                  <Link href="/services/control-automation" className="flex flex-col gap-0.5">
+                    <span className="font-semibold text-sm">Control & Automation Systems</span>
+                    <span className="text-xs text-muted-foreground">Bespoke control panels & monitoring</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="rounded-lg cursor-pointer hover:bg-muted/50 p-2">
                   <Link href="/services/system-integration" className="flex flex-col gap-0.5">
                     <span className="font-semibold text-sm">EE&I System Integration</span>
                     <span className="text-xs text-muted-foreground">Unified electrical & instrumentation</span>
@@ -111,6 +117,7 @@ export function Navbar() {
             <Link href="/services" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>All Solutions</Link>
             <Link href="/services/power-conversion" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>Power Conversion</Link>
             <Link href="/services/industrial-automation" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>Industrial Automation</Link>
+            <Link href="/services/control-automation" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>Control & Automation Systems</Link>
             <Link href="/services/system-integration" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>EE&I System Integration</Link>
             <Link href="/services/reverse-engineering" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>Reverse Engineering</Link>
             <Link href="/services/engineering-support" className="text-sm font-medium text-foreground/80 hover:text-accent" onClick={() => setIsOpen(false)}>Engineering Services</Link>

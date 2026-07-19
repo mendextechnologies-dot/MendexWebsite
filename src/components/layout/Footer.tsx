@@ -21,6 +21,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               <li><Link href="/services/power-conversion" className="text-sm text-slate-300 hover:text-accent transition-colors">Power Conversion</Link></li>
               <li><Link href="/services/industrial-automation" className="text-sm text-slate-300 hover:text-accent transition-colors">Industrial Automation</Link></li>
+              <li><Link href="/services/control-automation" className="text-sm text-slate-300 hover:text-accent transition-colors">Control & Automation</Link></li>
               <li><Link href="/services/system-integration" className="text-sm text-slate-300 hover:text-accent transition-colors">EE&I System Integration</Link></li>
             </ul>
           </div>
