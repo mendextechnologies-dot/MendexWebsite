@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu, 
@@ -20,9 +21,13 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">M</span>
-              </div>
+              <Image 
+                src="/logo.jpg" 
+                alt="Mendex Logo" 
+                width={32} 
+                height={32} 
+                className="rounded-lg object-contain"
+              />
               <span className="text-xl font-bold tracking-tight text-slate-900">Mendex</span>
             </Link>
           </div>

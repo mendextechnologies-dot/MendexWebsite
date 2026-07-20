@@ -10,7 +10,8 @@ import {
   Eye, 
   HeartHandshake, 
   Compass,
-  ArrowRight
+  ArrowRight,
+  ShieldCheck
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -72,8 +73,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold mb-6 border border-accent/20">
-                <HeartHandshake className="w-3.5 h-3.5" /> About Us
+              <div className="flex flex-wrap gap-2.5 mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold border border-accent/20">
+                  <HeartHandshake className="w-3.5 h-3.5" /> About Us
+                </div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-xs font-bold border border-emerald-500/20">
+                  <ShieldCheck className="w-3.5 h-3.5" /> ISO 9001:2015 Certified
+                </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-extrabold mb-8 text-slate-900 tracking-tight leading-tight">
                 Engineering Innovation. <br />

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 
 export function Footer() {
   return (
@@ -7,14 +9,22 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">M</span>
-              </div>
+              <Image 
+                src="/logo.jpg" 
+                alt="Mendex Logo" 
+                width={36} 
+                height={36} 
+                className="rounded-lg object-contain"
+              />
               <span className="text-xl font-bold tracking-tight">MENDEX</span>
             </Link>
             <p className="text-sm text-slate-400 max-w-xs mt-4">
               Delivering integrated solutions across Power Conversion, Industrial Automation, EE&I System Integration, Reverse Engineering, and critical industrial sourcing.
             </p>
+            <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold bg-white/5 border border-slate-700/50 rounded-lg px-3 py-1.5 text-slate-300">
+              <ShieldCheck className="w-4 h-4 text-accent" />
+              <span>ISO 9001:2015 Certified</span>
+            </div>
           </div>
           <div>
             <h4 className="text-xs font-bold mb-4 uppercase tracking-wider text-slate-400">Engineering Solutions</h4>
